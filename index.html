@@ -2,7 +2,7 @@
 <html lang="ro" data-theme="dark">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'sha256-/H++XhCNGt2J59MDbJvLnV5eLh3ywVXL5cMkkHRXu0k='; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'sha256-BXB+ljYKVa5SuQTAW32JRwG4cekJDrknsprUjpr7RLg='; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mahjong fără frontiere</title>
 <meta name="description" content="Mahjong fără frontiere: atlas de variante, solitaire cu înțelegeri garantat rezolvabile și mahjong cu 4 jucători contra 3 AI (riichi, Hong Kong, Sichuan). Offline, fără cont, fără rețea.">
@@ -39,7 +39,7 @@ input[type=checkbox],input[type=radio]{width:22px;height:22px;accent-color:var(-
 .btn.big{padding:12px 22px;font-size:1rem}
 .btn:disabled{opacity:.5;cursor:not-allowed}
 .btn[aria-pressed=true]{outline:2px solid var(--gold)}
-nav#tabs{display:flex;flex-wrap:wrap;gap:4px;padding:10px 0 0;border-bottom:1px solid var(--line)}
+#tabs{display:flex;flex-wrap:wrap;gap:4px;padding:10px 0 0;border-bottom:1px solid var(--line)}
 [role=tab]{background:transparent;color:var(--mut);border:1px solid transparent;border-bottom:none;border-radius:10px 10px 0 0;padding:10px 16px;min-height:44px;font:inherit;font-family:ui-monospace,Menlo,Consolas,monospace;cursor:pointer;white-space:nowrap}
 [role=tab][aria-selected=true]{background:var(--bg2);color:var(--gold);border-color:var(--line);font-weight:700}
 [role=tabpanel]{padding:16px 0 24px}
@@ -51,7 +51,7 @@ nav#tabs{display:flex;flex-wrap:wrap;gap:4px;padding:10px 0 0;border-bottom:1px 
 .search{flex:1 1 220px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
 .card{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow)}
-.card h3{margin:0;color:var(--gold)}
+.card h2,.card h3{margin:0;color:var(--gold);font-size:1.1rem}
 .card .sub{font-family:inherit;font-size:.95rem;color:var(--fg);margin:0}
 .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
@@ -154,7 +154,7 @@ noscript .ns{margin:20px;padding:14px;border:2px solid #c8832a;border-radius:10p
 </div>
 </header>
 <p id="note-lang" class="note" hidden></p>
-<nav id="tabs" role="tablist" aria-label="Mahjong"></nav>
+<nav aria-label="Mahjong"><div id="tabs" role="tablist" aria-label="Mahjong"></div></nav>
 <main id="main">
 <section id="panel-atlas" role="tabpanel" aria-labelledby="tab-atlas"></section>
 <section id="panel-play" role="tabpanel" aria-labelledby="tab-play" hidden></section>
@@ -2470,7 +2470,7 @@ function solNew(layoutId, seed) {
     face[order[i][0]] = swap ? pr[1] : pr[0];
     face[order[i][1]] = swap ? pr[0] : pr[1];
   }
-  return { layout: layoutId, seed: seed, n: L.n, pos: L.pos, face: face, removed: new Array(L.n).fill(false), hist: [], shuffles: 0, solution: order.map(function (p) { return p.slice(); }) };
+  return { layout: layoutId, seed: seed, n: L.n, pos: L.pos, face: face, removed: new Array(L.n).fill(false), hist: [], moves: 0, shuffles: 0, solution: order.map(function (p) { return p.slice(); }) };
 }
 function solFreeFn(S) {
   var L = getLayout(S.layout), g = L.geom;
@@ -2496,12 +2496,13 @@ function solPlay(S, a, b) {
   if (a === b || typeof a !== 'number' || typeof b !== 'number' || a !== (a | 0) || b !== (b | 0) || a < 0 || b < 0 || a >= S.n || b >= S.n) return false;
   var f = solFreeFn(S);
   if (!f(a) || !f(b) || !solMatch(S.face[a], S.face[b])) return false;
-  S.removed[a] = true; S.removed[b] = true; S.hist.push([a, b]);
+  S.removed[a] = true; S.removed[b] = true; S.hist.push([a, b]); S.moves = (S.moves || 0) + 1;
   return true;
 }
 function solUndo(S) {
   if (!S.hist.length) return false;
   var p = S.hist.pop();
+  if (S.moves > 0) S.moves--;
   S.removed[p[0]] = false; S.removed[p[1]] = false;
   return true;
 }
@@ -2618,7 +2619,7 @@ function solShuffle(S, rng) {
   }
   S.solution = order.map(function (p) { return p.slice(); });
   S.shuffles++;
-  S.hist = []; // după amestecare undo-ul nu mai poate reface starea veche
+  S.hist = []; // după amestecare undo-ul nu mai poate reface starea veche; contorul de mutări (S.moves) se păstrează
   return true;
 }
 
@@ -2735,6 +2736,7 @@ var UI = {
   'tbl.yourTurn': ['Rândul tău: alege o piesă de aruncat.', 'Your turn: choose a tile to discard.', 'À vous : choisissez une tuile à défausser.', 'Tocca a te: scegli una tessera da scartare.', 'Tu turno: elige una ficha para descartar.', 'Sua vez: escolha uma peça para descartar.', 'Du bist dran: wähle einen Stein zum Ablegen.'],
   'tbl.chooseRiichi': ['Alege piesa pe care o arunci declarând riichi (doar cele marcate).', 'Choose the tile to discard with riichi (only highlighted ones).', 'Choisissez la tuile à défausser avec riichi (seulement celles en évidence).', 'Scegli la tessera da scartare con riichi (solo quelle evidenziate).', 'Elige la ficha a descartar con riichi (solo las resaltadas).', 'Escolha a peça a descartar com riichi (só as destacadas).', 'Wähle den Stein für Riichi (nur markierte).'],
   'tbl.claimPrompt': ['Poți revendica piesa aruncată de {name}.', 'You may claim the tile discarded by {name}.', 'Vous pouvez réclamer la tuile défaussée par {name}.', 'Puoi rivendicare la tessera scartata da {name}.', 'Puedes reclamar la ficha descartada por {name}.', 'Você pode reclamar a peça descartada por {name}.', 'Du kannst den Stein von {name} beanspruchen.'],
+  'tbl.waitOthers': ['Se așteaptă ceilalți jucători…', 'Waiting for the other players…', 'En attente des autres joueurs…', 'In attesa degli altri giocatori…', 'Esperando a los demás jugadores…', 'Aguardando os outros jogadores…', 'Warten auf die anderen Spieler…'],
   'tbl.thinking': ['{name} se gândește…', '{name} is thinking…', '{name} réfléchit…', '{name} sta pensando…', '{name} está pensando…', '{name} está pensando…', '{name} überlegt…'],
   'tbl.chooseVoid': ['Alege culoarea lipsă (o vei arunca prima; nu poți câștiga cu ea).', 'Choose your missing suit (discard it first; you cannot win with it).', 'Choisissez votre couleur manquante (à défausser en premier ; on ne peut pas gagner avec).', 'Scegli il seme mancante (scartalo per primo; non puoi vincere con esso).', 'Elige tu palo faltante (descártalo primero; no se puede ganar con él).', 'Escolha o naipe ausente (descarte-o primeiro; não se ganha com ele).', 'Wähle deine fehlende Farbe (zuerst ablegen; man kann nicht damit gewinnen).'],
   'tbl.suit.0': ['Caractere', 'Characters', 'Caractères', 'Caratteri', 'Caracteres', 'Caracteres', 'Zeichen'],
@@ -3449,7 +3451,7 @@ function renderAtlas() {
 function badge(txt, cls) { return el('span', { class: 'badge ' + (cls || ''), text: txt }); }
 function atlasCard(a) {
   var c = el('article', { class: 'card', 'aria-labelledby': 'cn-' + a.id });
-  c.appendChild(el('h3', { id: 'cn-' + a.id, text: LT(a.name) }));
+  c.appendChild(el('h2', { id: 'cn-' + a.id, text: LT(a.name) }));
   c.appendChild(el('p', { class: 'sub', text: LT(a.sub) }));
   var meta = el('div', { class: 'meta' }, [
     badge(a.play ? t('badge.play') : t('badge.atlas'), a.play ? 'ok' : 'off'),
@@ -3822,7 +3824,7 @@ function updateBoard() {
   } else SOL.hl.setAttribute('display', 'none');
   var left = MJ.solRemaining(S);
   var st = $('#sol-stats');
-  if (st) st.textContent = t('sol.left') + ': ' + left + ' · ' + t('sol.moves') + ': ' + S.hist.length + ' · ' + t('sol.shuffles') + ': ' + S.shuffles + ' · ' + t('sol.deal') + ': ' + SOL.seed;
+  if (st) st.textContent = t('sol.left') + ': ' + left + ' · ' + t('sol.moves') + ': ' + (S.moves || 0) + ' · ' + t('sol.shuffles') + ': ' + S.shuffles + ' · ' + t('sol.deal') + ': ' + SOL.seed;
   var u = $('#sol-undo');
   if (u) u.disabled = S.hist.length === 0;
 }
@@ -4195,7 +4197,7 @@ function renderPrompt() {
   else if (H.phase === 'void') txt = t('tbl.chooseVoid');
   else if (H.phase === 'claim' && MJ.legalFor(T, 0).length) txt = t('tbl.claimPrompt', { name: pname(H.claim.src) }) + ' ' + idName(H.claim.id);
   else if (H.phase === 'act' && H.turn === 0) txt = TBL.riichiMode ? t('tbl.chooseRiichi') : t('tbl.yourTurn');
-  else txt = t('tbl.thinking', { name: pname(H.turn) });
+  else txt = H.turn === 0 ? t('tbl.waitOthers') : t('tbl.thinking', { name: pname(H.turn) });
   if (TBL.hint && TBL.hint.text) txt += ' — ' + TBL.hint.text;
   if (p.textContent !== txt) { p.textContent = txt; if (!H.result && (H.phase === 'claim' || (H.phase === 'act' && H.turn === 0) || H.phase === 'void')) say(txt); }
 }
@@ -4428,7 +4430,7 @@ if (document.readyState === 'loading') document.addEventListener('DOMContentLoad
 })();
 </script>
 <!-- tf-donate: sprijin voluntar (Patreon + Buy Me a Coffee) — self-contained, fără resurse externe, fără JS -->
-<div id="tf-donate" aria-label="Sprijină autorul">
+<div id="tf-donate" role="complementary" aria-label="Sprijină autorul">
 <style>
 #tf-donate{position:fixed;right:14px;bottom:14px;z-index:2147483600;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1}
 #tf-donate *{box-sizing:border-box}
