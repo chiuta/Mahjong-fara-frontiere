@@ -2,7 +2,7 @@
 <html lang="ro" data-theme="dark">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'sha256-BXB+ljYKVa5SuQTAW32JRwG4cekJDrknsprUjpr7RLg='; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'sha256-N67FP32uaHRj3Q9bGgIK4ZVaGljXMSq62heh6FwhvY8='; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mahjong fără frontiere</title>
 <meta name="description" content="Mahjong fără frontiere: atlas de variante, solitaire cu înțelegeri garantat rezolvabile și mahjong cu 4 jucători contra 3 AI (riichi, Hong Kong, Sichuan). Offline, fără cont, fără rețea.">
@@ -2715,6 +2715,9 @@ var UI = {
   'sol.removed': ['Pereche scoasă', 'Pair removed', 'Paire retirée', 'Coppia rimossa', 'Pareja retirada', 'Par removido', 'Paar entfernt'],
   'sol.noMatch': ['Nu se potrivesc sau nu sunt libere.', 'They do not match or are not free.', 'Elles ne correspondent pas ou ne sont pas libres.', 'Non corrispondono o non sono libere.', 'No coinciden o no están libres.', 'Não combinam ou não estão livres.', 'Sie passen nicht oder sind nicht frei.'],
   'sol.blocked': ['Piesa nu e liberă.', 'The tile is not free.', 'La tuile n’est pas libre.', 'La tessera non è libera.', 'La ficha no está libre.', 'A peça não está livre.', 'Der Stein ist nicht frei.'],
+  'sol.keys': ['Tastatură (pe tablă): săgeți = mută cursorul, Enter/Spațiu = alege, H = sugestie, U sau Ctrl+Z = anulează, S = amestecă.', 'Keyboard (on the board): arrows move the cursor, Enter/Space picks, H = hint, U or Ctrl+Z = undo, S = shuffle.', 'Clavier (sur le plateau) : flèches = déplacer le curseur, Entrée/Espace = choisir, H = indice, U ou Ctrl+Z = annuler, S = mélanger.', 'Tastiera (sulla tavola): frecce = muovi il cursore, Invio/Spazio = scegli, H = suggerimento, U o Ctrl+Z = annulla, S = mescola.', 'Teclado (en el tablero): flechas = mover el cursor, Intro/Espacio = elegir, H = pista, U o Ctrl+Z = deshacer, S = barajar.', 'Teclado (no tabuleiro): setas = mover o cursor, Enter/Espaço = escolher, H = dica, U ou Ctrl+Z = desfazer, S = embaralhar.', 'Tastatur (auf dem Brett): Pfeile = Cursor bewegen, Eingabe/Leertaste = wählen, H = Tipp, U oder Strg+Z = rückgängig, S = mischen.'],
+  'stats.clear': ['Șterge statisticile locale', 'Clear local statistics', 'Effacer les statistiques locales', 'Cancella le statistiche locali', 'Borrar las estadísticas locales', 'Apagar as estatísticas locais', 'Lokale Statistiken löschen'],
+  'stats.cleared': ['Statisticile locale au fost șterse.', 'Local statistics cleared.', 'Statistiques locales effacées.', 'Statistiche locali cancellate.', 'Estadísticas locales borradas.', 'Estatísticas locais apagadas.', 'Lokale Statistiken gelöscht.'],
   'sol.stats': ['Statistici locale (doar în acest browser)', 'Local statistics (this browser only)', 'Statistiques locales (ce navigateur uniquement)', 'Statistiche locali (solo in questo browser)', 'Estadísticas locales (solo en este navegador)', 'Estatísticas locais (só neste navegador)', 'Lokale Statistik (nur in diesem Browser)'],
   'tbl.you': ['Tu', 'You', 'Vous', 'Tu', 'Tú', 'Você', 'Du'],
   'tbl.ai': ['AI', 'AI', 'IA', 'IA', 'IA', 'IA', 'KI'],
@@ -3592,6 +3595,11 @@ function renderAbout() {
   var stt = getTblStats(), lines = [];
   ['riichi', 'hk', 'sichuan'].forEach(function (r) { if (stt[r]) lines.push(ruleTitle(r) + ': ' + stt[r].games + ' — ' + stt[r].ranks.join(' / ')); });
   if (lines.length) { P.appendChild(el('h3', { text: t('sol.stats') })); P.appendChild(ul(lines)); }
+  P.appendChild(el('button', { type: 'button', class: 'btn', id: 'stats-clear', text: t('stats.clear'), onclick: function () {
+    if (!window.confirm(t('stats.clear') + '?')) return;
+    ssetJ('solstats', {}); ssetJ('tblstats', {});
+    renderAbout(); say(t('stats.cleared'));
+  } }));
   if (!CJK_OK) P.appendChild(el('p', { class: 'note', text: t('glyphs.noCjk') }));
 }
 
@@ -3779,6 +3787,7 @@ function renderSol() {
   svg.addEventListener('blur', function () { updateBoard(); });
   P.appendChild(el('div', { class: 'board-wrap', id: 'sol-wrap' }, svg));
   P.appendChild(el('p', { class: 'muted small', text: t('sol.help') }));
+  P.appendChild(el('p', { class: 'muted small', text: t('sol.keys') }));
   var stt = getSolStats(), me = stt[SOL.layout] || { played: 0, won: 0 };
   P.appendChild(el('p', { class: 'muted small', text: t('sol.stats') + ': ' + solLayoutName(SOL.layout) + ' — ' + me.played + ' / ' + me.won }));
   applyZoom();
@@ -3894,6 +3903,13 @@ function solDoShuffle() {
 }
 function solKey(ev) {
   var S = SOL.S, k = ev.key;
+  if (!ev.altKey && !ev.metaKey && (k === 'z' || k === 'Z') && ev.ctrlKey) { ev.preventDefault(); solDoUndo(); return; }
+  if (!ev.altKey && !ev.metaKey && !ev.ctrlKey) {
+    var lk = k.length === 1 ? k.toLowerCase() : '';
+    if (lk === 'h') { ev.preventDefault(); solDoHint(); return; }
+    if (lk === 'u') { ev.preventDefault(); solDoUndo(); return; }
+    if (lk === 's') { ev.preventDefault(); solDoShuffle(); return; }
+  }
   if (k === 'Enter' || k === ' ' || k === 'Spacebar') {
     ev.preventDefault();
     if (SOL.cur >= 0) solPick(SOL.cur);

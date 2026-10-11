@@ -25,7 +25,8 @@ O aplicație dintr-un singur fișier (`index.html`, ~250 KB) din seria „fără
 - Sugestie AI pentru mutarea ta (marcată ca euristică, nu verdict), viteza AI, durată (o mână / 4 / 8 rotații).
 - Plăci desenate în SVG propriu (cercuri, bambus, caractere 一…九, vânturi 東南西北, dragoni 中發白, flori, anotimpuri), cu **detectare automată** a lipsei glifelor chinezești și **alternativă cu litere latine** (se poate alege și manual din antet).
 - Temă întunecată/luminoasă, tastatură completă (săgeți, Enter/Spațiu), anunțuri pentru cititoare de ecran, țintele tactile ≥ 44 px, `prefers-reduced-motion`, 390 px fără derulare orizontală.
-- Statistici simple, salvate local, doar în browserul tău.
+- Statistici simple, salvate local, doar în browserul tău; în fila **Despre** butonul „Șterge statisticile locale” le elimină (cu confirmare).
+- **Scurtături la solitaire** (cu focusul pe tablă): `H` sugestie, `U` sau `Ctrl+Z` anulează, `S` amestecă, în plus față de săgeți și Enter/Spațiu; lista apare sub tablă, în cele 7 limbi.
 
 ## Variante
 
@@ -93,5 +94,6 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
 ## Istoric / Changelog
 
+- **11 octombrie 2026** — scurtături de tastatură la solitaire (H / U sau Ctrl+Z / S) cu explicație sub tablă, buton „Șterge statisticile locale” în Despre (texte în 7 limbi); hash-ul CSP al scriptului recalculat; testat (0 erori, 0 încălcări CSP, axe-core 0 violări la 1280×800 și 360×740).
 - **11 octombrie 2026** — mesajul de la masă nu mai spune „You is thinking…” (când rândul formal e al tău, dar acțiunea e rezolvată de ceilalți, apare „Se așteaptă ceilalți jucători…”, în toate cele 7 limbi); contorul „Mutări” din solitaire nu se mai resetează la amestecare (are contor propriu, păstrat la amestecare, scăzut la anulare).
 - Accesibilitate: bara de file e într-un `nav` cu `tablist` separat, titlurile fișelor din Atlas sunt `h2` (ordine corectă a titlurilor), widgetul de sprijin are rol `complementary`; axe-core: 0 violări la 1280×800 și 360×740. Hash-ul CSP al scriptului a fost recalculat. Aplicația nu are număr de versiune.
