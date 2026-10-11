@@ -10,7 +10,7 @@ Atlas de variante de mahjong, solitaire cu înțelegeri garantat rezolvabile și
 
 ## Ce este
 
-O aplicație dintr-un singur fișier (`index.html`, ~250 KB) din seria „fără frontiere”. Are patru file: **Atlas** (fișe despre 8 variante), **Joacă** (jocurile), **Reguli și tabele** (tabelele de scor generate chiar din codul jocului) și **Despre**. Interfața este în română și, la alegere, în engleză, franceză, italiană, spaniolă, portugheză și germană.
+O aplicație dintr-un singur fișier (`index.html`, ~263 KB) din seria „fără frontiere”. Are patru file: **Atlas** (fișe despre 8 variante), **Joacă** (jocurile), **Reguli și tabele** (tabelele de scor generate chiar din codul jocului) și **Despre**. Interfața este în română și, la alegere, în engleză, franceză, italiană, spaniolă, portugheză și germană.
 
 „Mahjong” este un termen generic. „Shanghai” este denumirea comercială a unui joc de solitaire din 1986; aici jocul se numește „Mahjong solitaire” (cunoscut comercial ca „Shanghai”); nicio marcă înregistrată nu apare în titluri.
 
@@ -27,6 +27,7 @@ O aplicație dintr-un singur fișier (`index.html`, ~250 KB) din seria „fără
 - Temă întunecată/luminoasă, tastatură completă (săgeți, Enter/Spațiu), anunțuri pentru cititoare de ecran, țintele tactile ≥ 44 px, `prefers-reduced-motion`, 390 px fără derulare orizontală.
 - Statistici simple, salvate local, doar în browserul tău; în fila **Despre** butonul „Șterge statisticile locale” le elimină (cu confirmare).
 - **Scurtături la solitaire** (cu focusul pe tablă): `H` sugestie, `U` sau `Ctrl+Z` anulează, `S` amestecă, în plus față de săgeți și Enter/Spațiu; lista apare sub tablă, în cele 7 limbi.
+- **Partida de solitaire se salvează automat** (după fiecare mutare, anulare sau amestecare) și poate fi reluată din fila **Joacă** cu butonul „↻ Continuă jocul salvat”, în cele 7 limbi. Salvarea este validată la citire (aranjament existent, perechi complete, istoric coerent); date corupte sunt ignorate. „Șterge statisticile locale” șterge și partida salvată.
 
 ## Variante
 
@@ -52,7 +53,7 @@ O aplicație dintr-un singur fișier (`index.html`, ~250 KB) din seria „fără
 
 ## Confidențialitate și rețea
 
-Nimic nu pleacă din browser: fără fetch/XHR, fără telemetrie, fără fonturi sau scripturi externe (CSP `default-src 'none'`, script permis doar prin hash). Se folosește `localStorage` (limbă, temă, opțiuni, statistici) în `try/catch`; aplicația merge și fără el. Singurele legături externe sunt butoanele de sprijin Patreon / Buy Me a Coffee din subsol (`rel="noopener"`).
+Nimic nu pleacă din browser: fără fetch/XHR, fără telemetrie, fără fonturi sau scripturi externe (CSP `default-src 'none'`, script permis doar prin hash). Se folosește `localStorage` (limbă, temă, opțiuni, statistici, partida de solitaire în curs) în `try/catch`; aplicația merge și fără el. Singurele legături externe sunt butoanele de sprijin Patreon / Buy Me a Coffee din subsol (`rel="noopener"`).
 
 ## Limite și avertismente
 
@@ -94,6 +95,7 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
 ## Istoric / Changelog
 
+- **11 octombrie 2026** (runda 7) — salvare automată și reluare a partidei de solitaire (validată, 7 limbi, inclusă în textul de confidențialitate); testat în browser (mutare → reîncărcare → reluare cu același număr de plăci; salvare coruptă ignorată); 0 erori, axe 0 violări la 1280×800 și 360×740.
 - **11 octombrie 2026** — scurtături de tastatură la solitaire (H / U sau Ctrl+Z / S) cu explicație sub tablă, buton „Șterge statisticile locale” în Despre (texte în 7 limbi); hash-ul CSP al scriptului recalculat; testat (0 erori, 0 încălcări CSP, axe-core 0 violări la 1280×800 și 360×740).
 - **11 octombrie 2026** — mesajul de la masă nu mai spune „You is thinking…” (când rândul formal e al tău, dar acțiunea e rezolvată de ceilalți, apare „Se așteaptă ceilalți jucători…”, în toate cele 7 limbi); contorul „Mutări” din solitaire nu se mai resetează la amestecare (are contor propriu, păstrat la amestecare, scăzut la anulare).
 - Accesibilitate: bara de file e într-un `nav` cu `tablist` separat, titlurile fișelor din Atlas sunt `h2` (ordine corectă a titlurilor), widgetul de sprijin are rol `complementary`; axe-core: 0 violări la 1280×800 și 360×740. Hash-ul CSP al scriptului a fost recalculat. Aplicația nu are număr de versiune.

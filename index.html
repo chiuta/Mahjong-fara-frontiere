@@ -2,7 +2,7 @@
 <html lang="ro" data-theme="dark">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'sha256-N67FP32uaHRj3Q9bGgIK4ZVaGljXMSq62heh6FwhvY8='; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'sha256-+Bf0YjhVM9oKkntSC/+YEN6T7KaLprBZ92RfNPivMgA='; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mahjong fără frontiere</title>
 <meta name="description" content="Mahjong fără frontiere: atlas de variante, solitaire cu înțelegeri garantat rezolvabile și mahjong cu 4 jucători contra 3 AI (riichi, Hong Kong, Sichuan). Offline, fără cont, fără rețea.">
@@ -2696,6 +2696,8 @@ var UI = {
   'sol.new': ['↺ Înțelegere nouă', '↺ New deal', '↺ Nouvelle donne', '↺ Nuova mano', '↺ Nuevo reparto', '↺ Nova distribuição', '↺ Neues Spiel'],
   'sol.again': ['⟲ Aceeași înțelegere', '⟲ Same deal', '⟲ Même donne', '⟲ Stessa mano', '⟲ Mismo reparto', '⟲ Mesma distribuição', '⟲ Gleiches Spiel'],
   'sol.hint': ['💡 Sugestie', '💡 Hint', '💡 Indice', '💡 Suggerimento', '💡 Pista', '💡 Dica', '💡 Tipp'],
+  'play.resume': ['↻ Continuă jocul salvat ({n} plăci rămase)', '↻ Resume saved game ({n} tiles left)', '↻ Reprendre la partie sauvegardée ({n} tuiles restantes)', '↻ Riprendi la partita salvata ({n} tessere rimaste)', '↻ Reanudar la partida guardada ({n} fichas restantes)', '↻ Continuar o jogo guardado ({n} peças restantes)', '↻ Gespeichertes Spiel fortsetzen ({n} Steine übrig)'],
+  'play.resumeNote': ['Partida de solitaire se salvează automat, doar în acest browser.', 'The solitaire game is saved automatically, in this browser only.', 'La partie de solitaire est sauvegardée automatiquement, uniquement dans ce navigateur.', 'La partita di solitario viene salvata automaticamente, solo in questo browser.', 'La partida de solitario se guarda automáticamente, solo en este navegador.', 'O jogo de paciência é guardado automaticamente, só neste navegador.', 'Die Solitaire-Partie wird automatisch gespeichert, nur in diesem Browser.'],
   'sol.undo': ['↶ Anulează', '↶ Undo', '↶ Annuler', '↶ Annulla', '↶ Deshacer', '↶ Desfazer', '↶ Rückgängig'],
   'sol.shuffle': ['🔀 Amestecă', '🔀 Shuffle', '🔀 Mélanger', '🔀 Mescola', '🔀 Barajar', '🔀 Embaralhar', '🔀 Mischen'],
   'sol.free': ['Arată piesele libere', 'Show free tiles', 'Montrer les tuiles libres', 'Mostra le tessere libere', 'Mostrar fichas libres', 'Mostrar peças livres', 'Freie Steine zeigen'],
@@ -2821,7 +2823,7 @@ var UI = {
   'rules.notImpl': ['neimplementat', 'not implemented', 'non implémenté', 'non implementato', 'no implementado', 'não implementado', 'nicht implementiert'],
   'rules.tilesN': ['piese', 'tiles', 'tuiles', 'tessere', 'fichas', 'peças', 'Steine'],
   'about.title': ['Despre', 'About', 'À propos', 'Informazioni', 'Acerca de', 'Sobre', 'Über'],
-  'about.privacy': ['Confidențialitate: aplicația nu trimite nimic nicăieri (fără rețea, fără cont, fără telemetrie). Doar preferințe și statistici simple se salvează local în acest browser (localStorage), iar aplicația merge și fără ele.', 'Privacy: the app sends nothing anywhere (no network, no account, no telemetry). Only preferences and simple statistics are saved locally in this browser (localStorage); the app works without them.', 'Confidentialité : l’appli n’envoie rien nulle part (pas de réseau, pas de compte, pas de télémétrie). Seuls préférences et statistiques simples sont enregistrées localement (localStorage) ; l’appli fonctionne sans.', 'Privacy: l’app non invia nulla da nessuna parte (niente rete, niente account, niente telemetria). Solo preferenze e semplici statistiche sono salvate in locale (localStorage); l’app funziona anche senza.', 'Privacidad: la app no envía nada a ningún sitio (sin red, sin cuenta, sin telemetría). Solo preferencias y estadísticas simples se guardan localmente (localStorage); la app funciona sin ellas.', 'Privacidade: o app não envia nada a lugar nenhum (sem rede, sem conta, sem telemetria). Só preferências e estatísticas simples ficam locais (localStorage); o app funciona sem elas.', 'Datenschutz: Die App sendet nichts irgendwohin (kein Netz, kein Konto, keine Telemetrie). Nur Einstellungen und einfache Statistiken werden lokal gespeichert (localStorage); die App funktioniert auch ohne.'],
+  'about.privacy': ['Confidențialitate: aplicația nu trimite nimic nicăieri (fără rețea, fără cont, fără telemetrie). Doar preferințe, statistici simple și partida de solitaire în curs se salvează local în acest browser (localStorage), iar aplicația merge și fără ele.', 'Privacy: the app sends nothing anywhere (no network, no account, no telemetry). Only preferences, simple statistics and the solitaire game in progress are saved locally in this browser (localStorage); the app works without them.', 'Confidentialité : l’appli n’envoie rien nulle part (pas de réseau, pas de compte, pas de télémétrie). Seuls préférences, statistiques simples et la partie de solitaire en cours sont enregistrées localement (localStorage) ; l’appli fonctionne sans.', 'Privacy: l’app non invia nulla da nessuna parte (niente rete, niente account, niente telemetria). Solo preferenze, semplici statistiche e la partita di solitario in corso sono salvate in locale (localStorage); l’app funziona anche senza.', 'Privacidad: la app no envía nada a ningún sitio (sin red, sin cuenta, sin telemetría). Solo preferencias, estadísticas simples y la partida de solitario en curso se guardan localmente (localStorage); la app funciona sin ellas.', 'Privacidade: o app não envia nada a lugar nenhum (sem rede, sem conta, sem telemetria). Só preferências, estatísticas simples e o jogo de paciência em curso ficam locais (localStorage); o app funciona sem elas.', 'Datenschutz: Die App sendet nichts irgendwohin (kein Netz, kein Konto, keine Telemetrie). Nur Einstellungen, einfache Statistiken und die laufende Solitaire-Partie werden lokal gespeichert (localStorage); die App funktioniert auch ohne.'],
   'about.ai': ['AI-ul este didactic (euristic, fără LLM) și nu vede mâinile tale sau zidul; singura excepție este opțiunea explicită „Arată mâinile AI”.', 'The AI is didactic (heuristic, no LLM) and cannot see your hand or the wall; the only exception is the explicit “Show AI hands” option.', 'L’IA est didactique (heuristique, sans LLM) et ne voit ni votre main ni le mur ; seule exception : l’option explicite « Montrer les mains de l’IA ».', 'L’IA è didattica (euristica, senza LLM) e non vede la tua mano né il muro; unica eccezione: l’opzione esplicita «Mostra le mani IA».', 'La IA es didáctica (heurística, sin LLM) y no ve tu mano ni el muro; única excepción: la opción explícita «Mostrar manos de la IA».', 'A IA é didática (heurística, sem LLM) e não vê sua mão nem o muro; única exceção: a opção explícita «Mostrar mãos da IA».', 'Die KI ist didaktisch (heuristisch, kein LLM) und sieht weder deine Hand noch die Mauer; einzige Ausnahme: die ausdrückliche Option „KI-Hände zeigen“.'],
   'about.author': ['Autor: Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf', 'Author: Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf', 'Auteur : Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf', 'Autore: Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf', 'Autor: Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf', 'Autor: Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf', 'Autor: Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf'],
   'about.lic': ['Licență: nedeclarată (decizia autorului).', 'Licence: not declared (author’s decision).', 'Licence : non déclarée (décision de l’auteur).', 'Licenza: non dichiarata (decisione dell’autore).', 'Licencia: no declarada (decisión del autor).', 'Licença: não declarada (decisão do autor).', 'Lizenz: nicht erklärt (Entscheidung des Autors).'],
@@ -3597,7 +3599,7 @@ function renderAbout() {
   if (lines.length) { P.appendChild(el('h3', { text: t('sol.stats') })); P.appendChild(ul(lines)); }
   P.appendChild(el('button', { type: 'button', class: 'btn', id: 'stats-clear', text: t('stats.clear'), onclick: function () {
     if (!window.confirm(t('stats.clear') + '?')) return;
-    ssetJ('solstats', {}); ssetJ('tblstats', {});
+    ssetJ('solstats', {}); ssetJ('tblstats', {}); sset('solsave', '');
     renderAbout(); say(t('stats.cleared'));
   } }));
   if (!CJK_OK) P.appendChild(el('p', { class: 'note', text: t('glyphs.noCjk') }));
@@ -3691,6 +3693,15 @@ function renderPlay() {
   box.appendChild(row(el('label', { for: 'o-seed', text: t('opt.seed') }), sd));
   P.appendChild(box);
   P.appendChild(el('p', null, el('button', { type: 'button', class: 'btn pri big', id: 'btn-start', text: t('play.start'), onclick: function () { startPicked(); } })));
+  if (p === 'solitaire') {
+    var rs = solLoadSave();
+    if (rs) {
+      P.appendChild(el('p', null, [
+        el('button', { type: 'button', class: 'btn', id: 'btn-resume', text: t('play.resume').replace('{n}', String(rs.alive)), onclick: function () { startSol(rs.layout, rs.seed, rs); } }),
+        el('span', { class: 'muted small', text: ' ' + t('play.resumeNote') })
+      ]));
+    }
+  }
   if (p !== 'solitaire') P.appendChild(el('p', { class: 'muted small', text: t('about.ai') }));
 }
 function startPicked() {
@@ -3704,15 +3715,55 @@ var SOL = null;
 var SW = 22, SH = 29, STW = 44, STH = 58; // pas jumătate-piesă și dimensiunea plăcii (unități SVG)
 
 function solLayoutName(id) { var d = MJ.getLayout(id).def; return LT(d); }
-function startSol(layoutId, seed) {
+/* ---- salvare / reluare solitaire (localStorage, validat; date corupte → ignorate) ---- */
+function solSave() {
+  try {
+    if (!SOL || SOL.done || MJ.solWon(SOL.S)) { sset('solsave', ''); return; }
+    var S = SOL.S;
+    ssetJ('solsave', { v: 1, layout: S.layout, seed: SOL.seed, userSeed: !!SOL.userSeed, face: S.face, removed: S.removed.map(function (r) { return r ? 1 : 0; }), hist: S.hist, moves: S.moves || 0, shuffles: S.shuffles || 0, solution: S.solution || null });
+  } catch (e) { /* stocare indisponibilă */ }
+}
+function solLoadSave() {
+  try {
+    var d = sgetJ('solsave', null);
+    if (!d || typeof d !== 'object' || d.v !== 1 || typeof d.layout !== 'string' || !Number.isInteger(d.seed)) return null;
+    var S = MJ.solNew(d.layout, d.seed), n = S.n, i;
+    if (!Array.isArray(d.face) || d.face.length !== n || !Array.isArray(d.removed) || d.removed.length !== n || !Array.isArray(d.hist) || d.hist.length > n / 2) return null;
+    var cnt = {}, alive = 0, gone = 0;
+    for (i = 0; i < n; i++) {
+      var f = d.face[i];
+      if (!Number.isInteger(f) || f < 0 || f > 41 || (d.removed[i] !== 0 && d.removed[i] !== 1)) return null;
+      if (d.removed[i]) { gone++; continue; }
+      alive++;
+      var c = f >= 38 ? 'S' : f >= 34 ? 'F' : f;
+      cnt[c] = (cnt[c] || 0) + 1;
+    }
+    if (alive < 2 || gone % 2) return null;
+    for (var k in cnt) if (cnt[k] % 2) return null;
+    var hist = [];
+    for (i = 0; i < d.hist.length; i++) {
+      var h = d.hist[i];
+      if (!Array.isArray(h) || h.length !== 2 || !Number.isInteger(h[0]) || !Number.isInteger(h[1]) || h[0] < 0 || h[1] < 0 || h[0] >= n || h[1] >= n || !d.removed[h[0]] || !d.removed[h[1]]) return null;
+      hist.push([h[0], h[1]]);
+    }
+    var sol = null;
+    if (Array.isArray(d.solution) && d.solution.length <= n / 2 && d.solution.every(function (q) { return Array.isArray(q) && q.length === 2 && Number.isInteger(q[0]) && Number.isInteger(q[1]) && q[0] >= 0 && q[1] >= 0 && q[0] < n && q[1] < n; })) sol = d.solution.map(function (q) { return [q[0], q[1]]; });
+    return { layout: d.layout, seed: d.seed, userSeed: !!d.userSeed, face: d.face.slice(), removed: d.removed.map(function (r) { return !!r; }), hist: hist, moves: cleanNum(d.moves), shuffles: cleanNum(d.shuffles), solution: sol, alive: alive };
+  } catch (e) { return null; }
+}
+function startSol(layoutId, seed, restore) {
   var sd = seed == null ? MJ.newSeed() : seed;
   var S = MJ.solNew(layoutId, sd);
+  if (restore) { S.face = restore.face; S.removed = restore.removed; S.hist = restore.hist; S.moves = restore.moves; S.shuffles = restore.shuffles; S.solution = restore.solution; }
   var prev = SOL ? { zoom: SOL.zoom, showFree: SOL.showFree } : { zoom: 1, showFree: true };
-  SOL = { S: S, layout: layoutId, seed: sd, sel: -1, cur: -1, hint: null, zoom: prev.zoom, showFree: prev.showFree, nodes: [], msg: '', done: false, userSeed: seed != null };
-  var st = getSolStats();
-  st[layoutId] = st[layoutId] || { played: 0, won: 0 };
-  st[layoutId].played++;
-  ssetJ('solstats', st);
+  SOL = { S: S, layout: layoutId, seed: sd, sel: -1, cur: -1, hint: null, zoom: prev.zoom, showFree: prev.showFree, nodes: [], msg: '', done: false, userSeed: restore ? restore.userSeed : seed != null };
+  if (!restore) {
+    var st = getSolStats();
+    st[layoutId] = st[layoutId] || { played: 0, won: 0 };
+    st[layoutId].played++;
+    ssetJ('solstats', st);
+  }
+  solSave();
   PLAY.view = 'sol';
   renderSol();
   var f = MJ.solFreeSet(S);
@@ -3861,6 +3912,7 @@ function solAfterMove() {
     }
     solMsg(t('sol.won'));
   } else if (MJ.solStuck(S)) solMsg(t('sol.stuck'));
+  solSave();
   updateBoard();
 }
 function solPick(i) {
@@ -3892,13 +3944,13 @@ function solDoHint() {
   updateBoard();
 }
 function solDoUndo() {
-  if (MJ.solUndo(SOL.S)) { SOL.sel = -1; SOL.hint = null; solMsg(t('sol.undo').replace(/^\S+\s*/, ''), true); updateBoard(); }
+  if (MJ.solUndo(SOL.S)) { SOL.sel = -1; SOL.hint = null; solMsg(t('sol.undo').replace(/^\S+\s*/, ''), true); solSave(); updateBoard(); }
 }
 function solDoShuffle() {
   var S = SOL.S;
   if (MJ.solWon(S)) return;
   var rng = MJ.makeSeeded(((SOL.seed ^ (S.shuffles + 1) * 2654435761) ^ S.hist.length * 40503) >>> 0);
-  if (MJ.solShuffle(S, rng)) { SOL.sel = -1; SOL.hint = null; solMsg(t('sol.shuffled')); updateBoard(); }
+  if (MJ.solShuffle(S, rng)) { SOL.sel = -1; SOL.hint = null; solMsg(t('sol.shuffled')); solSave(); updateBoard(); }
   else { solMsg(t('sol.stuckHard')); }
 }
 function solKey(ev) {
