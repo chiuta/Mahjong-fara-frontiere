@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "slug": "mahjong-fara-frontiere",
+  "name": "Mahjong fără frontiere",
+  "version": "1.1.0",
+  "updated": "2026-10-14",
+  "description": "Mahjong fără frontiere: atlas de variante, solitaire cu înțelegeri garantat rezolvabile și mahjong cu 4 jucători contra 3 AI (riichi, Hong Kong, Sichuan). Offline, fără cont, fără rețea.",
+  "egress": [],
+  "permissions": [
+    "serviceWorker",
+    "localStorage",
+    "Web Crypto"
+  ],
+  "storageKeys": [
+    "mjfb."
+  ],
+  "sizeBytes": 499084,
+  "sha256": "8b3eef011e0233b9cfb079a783491b6593096437989364bf8eefb7b69ae1c985",
+  "csp": {
+    "present": true,
+    "directives": {
+      "default-src": "'none'",
+      "img-src": "'self' data:",
+      "style-src": "'unsafe-inline'",
+      "script-src": "sha256×3",
+      "base-uri": "'none'",
+      "form-action": "'none'",
+      "manifest-src": "'self'",
+      "worker-src": "'self'"
+    },
+    "scriptInline": "hash",
+    "connect": "'none'"
+  },
+  "features": {
+    "export": true,
+    "import": true,
+    "i18n": [],
+    "pwa": {
+      "manifest": true,
+      "serviceWorker": true
+    },
+    "modules": [
+      "core",
+      "label",
+      "bundle",
+      "qr",
+      "p2p",
+      "tts"
+    ]
+  },
+  "kit": {
+    "version": "1.0.0",
+    "modules": [
+      "core",
+      "label",
+      "bundle",
+      "qr",
+      "p2p",
+      "tts"
+    ]
+  },
+  "selfSerializing": false
+}

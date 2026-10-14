@@ -2,7 +2,7 @@
 
 Atlas de variante de mahjong, solitaire cu înțelegeri garantat rezolvabile și mahjong cu 4 jucători contra 3 AI (riichi, Hong Kong, Sichuan) — un singur fișier HTML, offline, fără cont și fără rețea.
 
-**Versiune:** 1.0.0 · **Ultima actualizare:** 12 octombrie 2026
+**Versiune:** 1.1.0 · **Ultima actualizare:** 14 octombrie 2026
 
 **Live:** https://chiuta.github.io/Mahjong-fara-frontiere/
 
@@ -93,7 +93,18 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
 “Mahjong without borders” is a single-file, offline HTML app: an atlas of eight mahjong variants, a mahjong solitaire with eight self-drawn layouts and reverse-constructed (guaranteed solvable) deals, and four-seat mahjong against three heuristic AIs in three playable variants — Japanese riichi, Hong Kong and Sichuan. MCR, Taiwanese, American and three-player (sanma) are atlas-only. Tiles are drawn as SVG with an automatic Latin-letter fallback when Chinese glyphs are missing. The UI is in Romanian, English, French, Italian, Spanish, Portuguese and German; long texts (atlas, glossary, scoring notes) exist only in Romanian and English and are shown in English, with a small note, in the other languages. The AI does not cheat (it sees only public information and its own hand; an explicit “show AI hands” learning option is the only exception). Every rule approximation is marked ⚠ in the app and in the table above. No network access, no tracking; strict CSP. License: not declared — the author’s decision.
 
+## Funcții noi (v1.1.0)
+
+- **Duel de solitaire pe rețea** („Duel pe rețea (aceeași tablă)”): ambii jucători primesc aceeași tablă (aceeași sămânță și aranjament) și rezolvă în paralel; fiecare vede progresul celuilalt, iar la final se compară rezultatele. În duel sunt oprite sugestiile, jocul nou și reluarea, iar salvarea locală nu e atinsă. Nu este Mahjong cu patru jucători: atât permite onest solitaire-ul. Conexiunea se face direct între cele două browsere (WebRTC), fără server al nostru: schimbi două texte (ofertă/răspuns), ca text sau cod QR, prin orice canal ales de tine. Implicit nu se contactează niciun server STUN; unul poate fi introdus manual în fereastra de conectare, doar dacă îl vrei. Dacă legătura se întrerupe, aplicația o arată și poate relua jocul din jurnalul mutărilor.
+- **Citire cu voce a fișelor din atlas** (buton „Ascultă”, FFF.tts).
+- Kit comun (core, label, bundle, qr, p2p, tts).
+- Textele noi sunt în toate limbile aplicației (inclusiv hu/de unde există sistem i18n); traducerile automate sunt neverificate nativ.
+- Teste: `tests/fff-r8.test.mjs` (rețea blocată, două contexte conectate prin dialogul real, axe 0 violări la 1280 și 360 px).
+
 ## Istoric / Changelog
+
+### 14 octombrie 2026 (v1.1.0)
+- Nou: duel de solitaire pe rețea (aceeași tablă), citirea fișelor cu voce, kit comun, teste.
 
 - 1.0.0 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
 - **11 octombrie 2026** (runda 7) — salvare automată și reluare a partidei de solitaire (validată, 7 limbi, inclusă în textul de confidențialitate); testat în browser (mutare → reîncărcare → reluare cu același număr de plăci; salvare coruptă ignorată); 0 erori, axe 0 violări la 1280×800 și 360×740.
