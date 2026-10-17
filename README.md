@@ -53,7 +53,7 @@ O aplicație dintr-un singur fișier (`index.html`, ~263 KB) din seria „fără
 
 ## Confidențialitate și rețea
 
-Nimic nu pleacă din browser: fără fetch/XHR, fără telemetrie, fără fonturi sau scripturi externe (CSP `default-src 'none'`, script permis doar prin hash). Se folosește `localStorage` (limbă, temă, opțiuni, statistici, partida de solitaire în curs) în `try/catch`; aplicația merge și fără el. Singurele legături externe sunt butoanele de sprijin Patreon / Buy Me a Coffee din subsol (`rel="noopener"`).
+Nimic nu pleacă din browser: fără fetch/XHR, fără telemetrie, fără fonturi sau scripturi externe (CSP `default-src 'none'`, script permis doar prin hash). Se folosește `localStorage` (limbă, temă, opțiuni, statistici, partida de solitaire în curs) în `try/catch`; aplicația merge și fără el. Singurele legături externe sunt butoanele de sprijin Buy Me a Coffee din subsol (`rel="noopener"`).
 
 ## Limite și avertismente
 

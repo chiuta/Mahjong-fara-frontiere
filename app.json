@@ -14,8 +14,8 @@
   "storageKeys": [
     "mjfb."
   ],
-  "sizeBytes": 498836,
-  "sha256": "0983174eb0fb96738fb65c7f8e207744727dd028eff2f00a637ccb57e56b7df2",
+  "sizeBytes": 497524,
+  "sha256": "5d250b773fa2a045329a70c82edb72b4f7fabf765f41a9f9277c846780075630",
   "csp": {
     "present": true,
     "directives": {
