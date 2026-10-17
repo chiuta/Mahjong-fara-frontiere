@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "slug": "mahjong-fara-frontiere",
+  "slug": "mahjong",
   "name": "Mahjong fără frontiere",
   "version": "1.1.0",
   "updated": "2026-10-14",
@@ -14,8 +14,8 @@
   "storageKeys": [
     "mjfb."
   ],
-  "sizeBytes": 499084,
-  "sha256": "8b3eef011e0233b9cfb079a783491b6593096437989364bf8eefb7b69ae1c985",
+  "sizeBytes": 498836,
+  "sha256": "0983174eb0fb96738fb65c7f8e207744727dd028eff2f00a637ccb57e56b7df2",
   "csp": {
     "present": true,
     "directives": {
