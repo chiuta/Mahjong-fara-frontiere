@@ -1,91 +1,93 @@
 # Mahjong fără frontiere
 
-Atlas de variante de mahjong, solitaire cu înțelegeri garantat rezolvabile și mahjong cu 4 jucători contra 3 AI (riichi, Hong Kong, Sichuan) — un singur fișier HTML, offline, fără cont și fără rețea.
+**English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.1.0 · **Ultima actualizare:** 14 octombrie 2026
+**Version:** 1.1.0 · **Last updated:** 2026-10-14
+
+An atlas of mahjong variants, mahjong solitaire with guaranteed-solvable deals, and 4-player mahjong against 3 AIs (riichi, Hong Kong, Sichuan) — a single HTML file, offline, with no account and no network.
 
 **Live:** https://chiuta.github.io/Mahjong-fara-frontiere/
 
-![Mahjong fără frontiere: solitaire pe aranjamentul „Broasca”](screenshot.png)
+![Mahjong fără frontiere: solitaire on the "Frog" layout](screenshot.png)
 
-## Ce este
+## What it is
 
-O aplicație dintr-un singur fișier (`index.html`, ~263 KB) din seria „fără frontiere”. Are patru file: **Atlas** (fișe despre 8 variante), **Joacă** (jocurile), **Reguli și tabele** (tabelele de scor generate chiar din codul jocului) și **Despre**. Interfața este în română și, la alegere, în engleză, franceză, italiană, spaniolă, portugheză și germană.
+A single-file app (`index.html`, ~263 KB) from the "without borders" series. It has four tabs: **Atlas** (cards on 8 variants), **Play** (the games), **Rules and tables** (the scoring tables generated straight from the game's code) and **About**. The interface is in Romanian and, optionally, in English, French, Italian, Spanish, Portuguese and German.
 
-„Mahjong” este un termen generic. „Shanghai” este denumirea comercială a unui joc de solitaire din 1986; aici jocul se numește „Mahjong solitaire” (cunoscut comercial ca „Shanghai”); nicio marcă înregistrată nu apare în titluri.
+"Mahjong" is a generic term. "Shanghai" is the trade name of a 1986 solitaire game; here the game is called "Mahjong solitaire" (commercially known as "Shanghai"); no registered trademark appears in the titles.
 
-## Funcții (verificate în cod și prin teste)
+## Features (checked in code and by tests)
 
-- **Mahjong solitaire** cu 8 aranjamente desenate de autor (Plat, Piramidă, Cruce, Broasca, Dragon, Cetate, Fluture, Turn; 72–144 de plăci). Piesă liberă = nimic deasupra ȘI stânga sau dreapta liberă. Florile se potrivesc între ele, anotimpurile între ele. Înțelegerile sunt generate **invers** (din tabla goală), deci sunt rezolvabile; sugestie (verificată fie prin certificatul de generare, când piesele rămase îl mai respectă, fie cu un solver cu buget mic de noduri; altfel marcată „neverificată”), anulare nelimitată, amestecare a pieselor rămase (tot rezolvabilă), număr de înțelegere (seed) reproductibil, zoom, tastatură.
-- **Mahjong cu 4 jucători (tu + 3 AI)** în trei variante: **riichi japonez**, **Hong Kong** și **Sichuan** (vezi tabelul de mai jos). Motor de reguli separat de interfață: tragere, aruncare, pung/chow/kong (cu legalitate verificată de motor), câștig 4 seturi + pereche, 7 perechi, 13 orfani, scorare, remize, rotația dealerului.
-- **Riichi:** riichi, ippatsu, dora/ura-dora/aka, furiten (propriu, temporar, după riichi), kuikae, chankan, rinshan, abandon 9 orfani, remize speciale (patru vânturi, patru kan-uri, patru riichi), nagashi mangan, plata tenpai, honba și bețe riichi; 42 de intrări în tabelul de yaku/yakuman/bonusuri; fu și han → puncte.
-- **Hong Kong:** 136 sau 144 de plăci, flori și anotimpuri cu piese de înlocuire, faan minim configurabil (0–5), plafon (8/10/13), șapte perechi opțional, două moduri de plată la aruncare.
-- **Sichuan:** 108 plăci, culoare lipsă, fără chow, câștiguri multiple („bătălia de sânge”, opțional), kong prin adăugare doar imediat după tragerea celei de-a patra piese (regula MIL), kong-uri plătite imediat, penalizări la epuizare.
-- **AI didactic** (euristic: shanten, piese rămase, apărare; fără LLM). **Nu trișează**: decide doar din informația publică + propria mână; testat. Excepție explicită: opțiunea „Arată mâinile AI (doar pentru învățare)”.
-- Sugestie AI pentru mutarea ta (marcată ca euristică, nu verdict), viteza AI, durată (o mână / 4 / 8 rotații).
-- Plăci desenate în SVG propriu (cercuri, bambus, caractere 一…九, vânturi 東南西北, dragoni 中發白, flori, anotimpuri), cu **detectare automată** a lipsei glifelor chinezești și **alternativă cu litere latine** (se poate alege și manual din antet).
-- Temă întunecată/luminoasă, tastatură completă (săgeți, Enter/Spațiu), anunțuri pentru cititoare de ecran, țintele tactile ≥ 44 px, `prefers-reduced-motion`, 390 px fără derulare orizontală.
-- Statistici simple, salvate local, doar în browserul tău; în fila **Despre** butonul „Șterge statisticile locale” le elimină (cu confirmare).
-- **Scurtături la solitaire** (cu focusul pe tablă): `H` sugestie, `U` sau `Ctrl+Z` anulează, `S` amestecă, în plus față de săgeți și Enter/Spațiu; lista apare sub tablă, în cele 7 limbi.
-- **Partida de solitaire se salvează automat** (după fiecare mutare, anulare sau amestecare) și poate fi reluată din fila **Joacă** cu butonul „↻ Continuă jocul salvat”, în cele 7 limbi. Salvarea este validată la citire (aranjament existent, perechi complete, istoric coerent); date corupte sunt ignorate. „Șterge statisticile locale” șterge și partida salvată.
+- **Mahjong solitaire** with 8 layouts drawn by the author (Flat, Pyramid, Cross, Frog, Dragon, Citadel, Butterfly, Tower; 72–144 tiles). A free tile = nothing on top AND free on the left or right. Flowers match each other, seasons match each other. Deals are generated **in reverse** (from the empty board), so they are solvable; hint (verified either by the generation certificate, when the remaining tiles still respect it, or with a low node-budget solver; otherwise marked "unverified"), unlimited undo, shuffling of the remaining tiles (still solvable), reproducible deal number (seed), zoom, keyboard.
+- **4-player mahjong (you + 3 AIs)** in three variants: **Japanese riichi**, **Hong Kong** and **Sichuan** (see the table below). Rules engine separate from the interface: draw, discard, pung/chow/kong (with legality checked by the engine), winning 4 sets + pair, 7 pairs, 13 orphans, scoring, draws, dealer rotation.
+- **Riichi:** riichi, ippatsu, dora/ura-dora/aka, furiten (own, temporary, after riichi), kuikae, chankan, rinshan, nine-terminals abortive draw, special draws (four winds, four kans, four riichi), nagashi mangan, tenpai payment, honba and riichi sticks; 42 entries in the yaku/yakuman/bonus table; fu and han → points.
+- **Hong Kong:** 136 or 144 tiles, flowers and seasons with replacement tiles, configurable minimum faan (0–5), limit (8/10/13), optional seven pairs, two payment modes on discard.
+- **Sichuan:** 108 tiles, missing suit, no chow, multiple wins ("bloody battle", optional), kong by addition only immediately after drawing the fourth tile (MIL rule), kongs paid immediately, exhaustive-draw penalties.
+- **Didactic AI** (heuristic: shanten, remaining tiles, defence; no LLM). It **does not cheat**: it decides only from public information + its own hand; tested. Explicit exception: the "Show AI hands (for learning only)" option.
+- AI hint for your move (marked as a heuristic, not a verdict), AI speed, length (one hand / 4 / 8 rotations).
+- Tiles drawn in custom SVG (circles, bamboo, characters 一…九, winds 東南西北, dragons 中發白, flowers, seasons), with **automatic detection** of missing Chinese glyphs and a **Latin-letter fallback** (it can also be chosen manually from the header).
+- Dark/light theme, full keyboard support (arrows, Enter/Space), announcements for screen readers, touch targets ≥ 44 px, `prefers-reduced-motion`, 390 px with no horizontal scrolling.
+- Simple statistics, saved locally, only in your browser; in the **About** tab the "Clear local statistics" button removes them (with confirmation).
+- **Solitaire shortcuts** (with focus on the board): `H` hint, `U` or `Ctrl+Z` undo, `S` shuffle, in addition to the arrows and Enter/Space; the list appears under the board, in the 7 languages.
+- **The solitaire game is saved automatically** (after every move, undo or shuffle) and can be resumed from the **Play** tab with the "↻ Continue saved game" button, in the 7 languages. The save is validated on reading (existing layout, complete pairs, coherent history); corrupted data is ignored. "Clear local statistics" also clears the saved game.
 
-## Variante
+## Variants
 
-| Variantă | Jucabilă? | ⚠ Aproximări (pe scurt; lista completă în aplicație) |
+| Variant | Playable? | ⚠ Approximations (in brief; full list in the app) |
 |---|---|---|
-| Mahjong solitaire | da | aranjamente proprii; sub 144 de plăci se folosește un subset de perechi; garanția de rezolvabilitate e pentru înțelegere și amestecări, nu pentru orice mutare; sugestia e verificată doar prin certificat sau când solverul (buget mic) termină |
-| Riichi japonez | da | fără ron dublu/triplu (prioritate celui mai apropiat), fără pao, renhou, chankan pe kan ascuns, uma/oka și „sudden death”; renchan fără agari-yame; kazoe yakuman activ; fără yaku locale |
-| Hong Kong | da | tabelul faan → puncte („half spicy”) și modurile de plată sunt alegerea documentată; lipsesc câștigul cu dublu kong și cel instant cu 7 flori; un singur câștigător la aruncare |
-| Sichuan | da | fără schimbul de 3 plăci; culoarea lipsă e publică; „porcul de floare” plătește 48 împărțit egal (sursa nu spune cui); penalizări simplificate |
-| MCR (oficial chinez) | doar în atlas | — |
-| Mahjong taiwanez (16 plăci) | doar în atlas | — |
-| Mahjong american | doar în atlas | cardul anual nu e reprodus |
-| Sanma (3 jucători, Japonia) | doar în atlas | — |
+| Mahjong solitaire | yes | own layouts; below 144 tiles a subset of pairs is used; the solvability guarantee is for the deal and shuffles, not for every move; the hint is verified only by certificate or when the (low-budget) solver finishes |
+| Japanese riichi | yes | no double/triple ron (priority to the nearest player), no pao, renhou, chankan on a concealed kan, uma/oka and "sudden death"; renchan without agari-yame; kazoe yakuman active; no local yaku |
+| Hong Kong | yes | the faan → points table ("half spicy") and the payment modes are a documented choice; missing: win with a double kong and the instant win with 7 flowers; a single winner on discard |
+| Sichuan | yes | no 3-tile exchange; the missing suit is public; the "flower pig" pays 48 split equally (the source does not say to whom); simplified penalties |
+| MCR (official Chinese) | atlas only | — |
+| Taiwanese mahjong (16 tiles) | atlas only | — |
+| American mahjong | atlas only | the annual card is not reproduced |
+| Sanma (3 players, Japan) | atlas only | — |
 
-## Manual de utilizare
+## User guide
 
-1. Deschide `index.html` (sau pagina Live). Alege limba, tema și, dacă plăcile arată ciudat, „Simboluri plăci”.
-2. Fila **Atlas**: citește fișele (reguli în scurt, ce nu e fidel, surse); „▶ Joacă” duce la joc.
-3. Fila **Joacă**: alege jocul, setează opțiunile (aranjament / durată / faan minim etc., seed opțional) și apasă „▶ Începe”.
-4. **Solitaire:** apasă două plăci libere identice (sau mută cursorul cu săgețile și apasă Enter). „Sugestie” marchează o pereche; „Anulează” revine; „Amestecă” regenerează pozițiile rămase când nu mai sunt mutări.
-5. **Masa cu AI:** când e rândul tău, apasă o piesă din mână pentru a o arunca. Pentru riichi apasă „Riichi”, apoi o piesă marcată. Când un AI aruncă o piesă care te interesează apar butoanele Ron / Pung / Chow / Kong / Pas. „Sugestie AI” arată ce ar face AI-ul. La final de mână vezi yaku/faan/fan și schimbările de scor.
-6. Fila **Reguli și tabele** conține tabelele de yaku, faan și fan exact așa cum sunt în cod, glosarul și ghidul plăcilor.
+1. Open `index.html` (or the Live page). Choose the language, the theme and, if the tiles look odd, "Tile symbols".
+2. **Atlas** tab: read the cards (rules in brief, what is not faithful, sources); "▶ Play" takes you to the game.
+3. **Play** tab: choose the game, set the options (layout / length / minimum faan etc., optional seed) and press "▶ Start".
+4. **Solitaire:** press two identical free tiles (or move the cursor with the arrows and press Enter). "Hint" marks a pair; "Undo" goes back; "Shuffle" regenerates the remaining positions when there are no more moves.
+5. **The table with AIs:** when it is your turn, press a tile in your hand to discard it. For riichi press "Riichi", then a marked tile. When an AI discards a tile you are interested in, the Ron / Pung / Chow / Kong / Pass buttons appear. "AI hint" shows what the AI would do. At the end of a hand you see yaku/faan/fan and the score changes.
+6. The **Rules and tables** tab contains the yaku, faan and fan tables exactly as they are in the code, the glossary and the tile guide.
 
-## Confidențialitate și rețea
+## Privacy and network
 
-Nimic nu pleacă din browser: fără fetch/XHR, fără telemetrie, fără fonturi sau scripturi externe (CSP `default-src 'none'`, script permis doar prin hash). Se folosește `localStorage` (limbă, temă, opțiuni, statistici, partida de solitaire în curs) în `try/catch`; aplicația merge și fără el. Singurele legături externe sunt butoanele de sprijin Buy Me a Coffee din subsol (`rel="noopener"`).
+Nothing leaves the browser: no fetch/XHR, no telemetry, no external fonts or scripts (CSP `default-src 'none'`, script allowed only by hash). `localStorage` is used (language, theme, options, statistics, the solitaire game in progress) in `try/catch`; the app works without it too. The only external links are the Buy Me a Coffee support buttons in the footer (`rel="noopener"`).
 
-## Limite și avertismente
+## Limits and warnings
 
-- **Nu este un produs complet de competiție.** Fiecare variantă are aproximări ⚠ (tabelul de mai sus și fișele din aplicație). Reguli regionale diferă: la Hong Kong s-a implementat tabelul „half spicy” și plata la aruncare ca opțiune; la riichi, „atamahane” (un singur câștigător la aruncare); la Sichuan, fără schimbul de plăci.
-- **AI-ul este slab-spre-mediu.** Nu are modele de adversar, nu joacă riichi-ul ofensiv/defensiv la nivel de expert și nu calculează probabilități complete. Contra unei baze aleatoare (60 de jocuri pe variantă, locul AI-ului rotit): câștigă pe mână ~52,8% la riichi, ~29,1% la Hong Kong (cu bazele aleatoare aproape toate mâinile sunt remize, iar remiza repetă dealerul, deci jocurile sunt foarte lungi; măsura e slabă) și ~71,3% la Sichuan (paritate = 25%). Între AI-uri partidele sunt foarte agresive (~89% din mâinile de riichi se termină cu câștig).
-- Textele lungi (atlas, glosar, notele de scor) există doar în **română și engleză**; în celelalte 5 limbi se afișează textul în engleză, cu o notă discretă („text în engleză”). Elementele de interfață sunt traduse în toate cele 7 limbi (paritate verificată de script).
-- La Hong Kong, remiza păstrează dealerul (regulă obișnuită): cu un faan minim mare și adversari pasivi jocul poate dura mult; coboară faan-ul minim sau alege „o singură mână”.
-- „O singură mână” oprește jocul după prima mână (nu după rotația dealerului).
-- Traducerile din franceză, italiană, spaniolă, portugheză și germană sunt făcute fără verificare de către vorbitori nativi.
-- Cu fonturi fără glife chinezești se trece automat pe litere latine; dacă detecția greșește, folosește selectorul din antet.
+- **It is not a complete competition product.** Each variant has ⚠ approximations (the table above and the cards in the app). Regional rules differ: for Hong Kong the "half spicy" table and payment on discard as an option were implemented; for riichi, "atamahane" (a single winner on discard); for Sichuan, no tile exchange.
+- **The AI is weak-to-medium.** It has no opponent models, does not play riichi offensively/defensively at expert level and does not compute full probabilities. Against a random baseline (60 games per variant, the AI's seat rotated): it wins ~52.8% of hands at riichi, ~29.1% at Hong Kong (with random baselines almost all hands are draws, and a draw repeats the dealer, so the games are very long; the measure is weak) and ~71.3% at Sichuan (parity = 25%). Between AIs the games are very aggressive (~89% of riichi hands end with a win).
+- The long texts (atlas, glossary, scoring notes) exist only in **Romanian and English**; in the other 5 languages the text is displayed in English, with a discreet note ("text in English"). The interface elements are translated into all 7 languages (parity checked by script).
+- At Hong Kong, a draw keeps the dealer (a usual rule): with a high minimum faan and passive opponents the game can last a long time; lower the minimum faan or choose "one hand".
+- "One hand" stops the game after the first hand (not after the dealer rotation).
+- The French, Italian, Spanish, Portuguese and German translations were made without verification by native speakers.
+- With fonts without Chinese glyphs it switches automatically to Latin letters; if the detection is wrong, use the selector in the header.
 
-## Teste (în afara pachetului: `scratchpad/new/games_work/Mahjong-fara-frontiere/`)
+## Tests (outside the package: `scratchpad/new/games_work/Mahjong-fara-frontiere/`)
 
-Rezumat; comenzi și rezultate complete în raportul `new/reports/Mahjong-fara-frontiere.md`. Mâna câștigătoare (4 seturi + pereche, 7 perechi, 13 orfani) comparată cu o implementare de referință prin forță brută pe mii de mâini; tabelul de puncte riichi (111 celule) și exemple lucrate din Wikipedia și sloperama; invariantul numărului de plăci; ≥300 de partide AI contra AI per variantă fără erori; 1000 de înțelegeri solitaire reluate până la tabla goală; verificare că AI-ul nu vede informație ascunsă; verificare Playwright/Chromium a interfeței (toate aranjamentele, toate variantele, 7 limbi, 390 px).
+Summary; commands and full results in the report `new/reports/Mahjong-fara-frontiere.md`. The winning hand (4 sets + pair, 7 pairs, 13 orphans) compared with a brute-force reference implementation on thousands of hands; the riichi points table (111 cells) and worked examples from Wikipedia and sloperama; the tile-count invariant; ≥300 AI-vs-AI games per variant without errors; 1000 solitaire deals replayed to the empty board; a check that the AI does not see hidden information; a Playwright/Chromium check of the interface (all layouts, all variants, 7 languages, 390 px).
 
-## Audit independent (rezumat)
+## Independent audit (summary)
 
-Un audit separat (cod și teste scrise independent de autorul motorului) a corectat: kong ascuns/prin adăugare oferit imediat după pung/chow (fără piesă trasă); la Hong Kong „vânturi mari”/„patru careuri” formate doar din onori erau punctate 10 în loc de 13 faan; „Sugestie” din solitaire putea îngheța interfața câteva secunde (acum buget total mic); date corupte din `localStorage` puteau opri pornirea jocului; la Sichuan, o piesă de kong „furată” (chankan) rămânea pierdută din mână; etichetă română „sângele curge” → „bătălia de sânge”. Rămân neverificate: randarea în Firefox/Safari fără fonturi chinezești (testat doar în Chromium, cu și fără fonturi CJK) și traducerile fr/it/es/pt/de fără vorbitori nativi.
+A separate audit (code and tests written independently of the engine's author) fixed: a concealed/added kong offered immediately after a pung/chow (without a drawn tile); at Hong Kong, "big winds"/"four quads" made up only of honours were scored 10 instead of 13 faan; the solitaire "Hint" could freeze the interface for a few seconds (now a small total budget); corrupted `localStorage` data could stop the game from starting; at Sichuan, a "robbed" kong tile (chankan) remained lost from the hand; the Romanian label "sângele curge" → "bătălia de sânge". Still unverified: rendering in Firefox/Safari without Chinese fonts (tested only in Chromium, with and without CJK fonts) and the fr/it/es/pt/de translations without native speakers.
 
-## Surse
+## Sources
 
-Reguli consultate pentru implementare și verificare (articole Wikipedia, fără copiere de text): „Mahjong”, „Mahjong solitaire”, „Japanese mahjong”, „Japanese mahjong yaku”, „Japanese mahjong scoring rules” (tabelul de puncte și exemplele lucrate), „Hong Kong mahjong”, „Sichuan mahjong”, „Mahjong Competition Rules”, „Taiwanese mahjong”, „American mahjong”; exemplul de calcul al fu-ului (90 fu) de pe sloperama.com. Wikipedia poate conține erori sau diferențe regionale; fișele din atlas spun ce variantă s-a ales.
+Rules consulted for implementation and verification (Wikipedia articles, without copying text): "Mahjong", "Mahjong solitaire", "Japanese mahjong", "Japanese mahjong yaku", "Japanese mahjong scoring rules" (the points table and worked examples), "Hong Kong mahjong", "Sichuan mahjong", "Mahjong Competition Rules", "Taiwanese mahjong", "American mahjong"; the fu calculation example (90 fu) from sloperama.com. Wikipedia may contain errors or regional differences; the atlas cards say which variant was chosen.
 
-## Rulare locală
+## Running locally
 
-Deschide `index.html` într-un browser (fără server, fără instalare). Pentru a reconstrui din surse: `node build_site.js` în folderul de lucru (scriptul nu face apeluri de rețea).
+Open `index.html` in a browser (no server, no installation). To rebuild from sources: `node build_site.js` in the working folder (the script makes no network calls).
 
-## Licență
+## License
 
-MIT — vezi fișierul `LICENSE`.
+MIT — see the `LICENSE` file.
 
-## Autor
+## Author
 
 Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
@@ -93,21 +95,21 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
 “Mahjong without borders” is a single-file, offline HTML app: an atlas of eight mahjong variants, a mahjong solitaire with eight self-drawn layouts and reverse-constructed (guaranteed solvable) deals, and four-seat mahjong against three heuristic AIs in three playable variants — Japanese riichi, Hong Kong and Sichuan. MCR, Taiwanese, American and three-player (sanma) are atlas-only. Tiles are drawn as SVG with an automatic Latin-letter fallback when Chinese glyphs are missing. The UI is in Romanian, English, French, Italian, Spanish, Portuguese and German; long texts (atlas, glossary, scoring notes) exist only in Romanian and English and are shown in English, with a small note, in the other languages. The AI does not cheat (it sees only public information and its own hand; an explicit “show AI hands” learning option is the only exception). Every rule approximation is marked ⚠ in the app and in the table above. No network access, no tracking; strict CSP. License: MIT (see LICENSE).
 
-## Funcții noi (v1.1.0)
+## New features (v1.1.0)
 
-- **Duel de solitaire pe rețea** („Duel pe rețea (aceeași tablă)”): ambii jucători primesc aceeași tablă (aceeași sămânță și aranjament) și rezolvă în paralel; fiecare vede progresul celuilalt, iar la final se compară rezultatele. În duel sunt oprite sugestiile, jocul nou și reluarea, iar salvarea locală nu e atinsă. Nu este Mahjong cu patru jucători: atât permite onest solitaire-ul. Conexiunea se face direct între cele două browsere (WebRTC), fără server al nostru: schimbi două texte (ofertă/răspuns), ca text sau cod QR, prin orice canal ales de tine. Implicit nu se contactează niciun server STUN; unul poate fi introdus manual în fereastra de conectare, doar dacă îl vrei. Dacă legătura se întrerupe, aplicația o arată și poate relua jocul din jurnalul mutărilor.
-- **Citire cu voce a fișelor din atlas** (buton „Ascultă”, FFF.tts).
-- Kit comun (core, label, bundle, qr, p2p, tts).
-- Textele noi sunt în toate limbile aplicației (inclusiv hu/de unde există sistem i18n); traducerile automate sunt neverificate nativ.
-- Teste: `tests/fff-r8.test.mjs` (rețea blocată, două contexte conectate prin dialogul real, axe 0 violări la 1280 și 360 px).
+- **Network solitaire duel** ("Network duel (same board)"): both players get the same board (same seed and layout) and solve in parallel; each sees the other's progress, and at the end the results are compared. In a duel, hints, new game and resume are disabled, and the local save is not touched. It is not four-player Mahjong: that is all solitaire honestly allows. The connection is made directly between the two browsers (WebRTC), with no server of ours: you exchange two texts (offer/answer), as text or QR code, through any channel you choose. By default no STUN server is contacted; one can be entered manually in the connection window, only if you want it. If the link drops, the app shows it and can resume the game from the move log.
+- **Voice reading of the atlas cards** ("Listen" button, FFF.tts).
+- Shared kit (core, label, bundle, qr, p2p, tts).
+- The new texts are in all the app's languages (including hu/de where an i18n system exists); the automatic translations are not natively verified.
+- Tests: `tests/fff-r8.test.mjs` (network blocked, two contexts connected through the real dialog, axe 0 violations at 1280 and 360 px).
 
-## Istoric / Changelog
+## History / Changelog
 
-### 14 octombrie 2026 (v1.1.0)
-- Nou: duel de solitaire pe rețea (aceeași tablă), citirea fișelor cu voce, kit comun, teste.
+### 14 October 2026 (v1.1.0)
+- New: network solitaire duel (same board), voice reading of the cards, shared kit, tests.
 
-- 1.0.0 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
-- **11 octombrie 2026** (runda 7) — salvare automată și reluare a partidei de solitaire (validată, 7 limbi, inclusă în textul de confidențialitate); testat în browser (mutare → reîncărcare → reluare cu același număr de plăci; salvare coruptă ignorată); 0 erori, axe 0 violări la 1280×800 și 360×740.
-- **11 octombrie 2026** — scurtături de tastatură la solitaire (H / U sau Ctrl+Z / S) cu explicație sub tablă, buton „Șterge statisticile locale” în Despre (texte în 7 limbi); hash-ul CSP al scriptului recalculat; testat (0 erori, 0 încălcări CSP, axe-core 0 violări la 1280×800 și 360×740).
-- **11 octombrie 2026** — mesajul de la masă nu mai spune „You is thinking…” (când rândul formal e al tău, dar acțiunea e rezolvată de ceilalți, apare „Se așteaptă ceilalți jucători…”, în toate cele 7 limbi); contorul „Mutări” din solitaire nu se mai resetează la amestecare (are contor propriu, păstrat la amestecare, scăzut la anulare).
-- Accesibilitate: bara de file e într-un `nav` cu `tablist` separat, titlurile fișelor din Atlas sunt `h2` (ordine corectă a titlurilor), widgetul de sprijin are rol `complementary`; axe-core: 0 violări la 1280×800 și 360×740. Hash-ul CSP al scriptului a fost recalculat. Aplicația nu are număr de versiune.
+- 1.0.0 — 2026-10-12: the version and the date of the last update are shown in the app
+- **11 October 2026** (round 7) — automatic saving and resuming of the solitaire game (validated, 7 languages, included in the privacy text); tested in the browser (move → reload → resume with the same number of tiles; corrupted save ignored); 0 errors, axe 0 violations at 1280×800 and 360×740.
+- **11 October 2026** — keyboard shortcuts for solitaire (H / U or Ctrl+Z / S) with an explanation under the board, a "Clear local statistics" button in About (texts in 7 languages); the script's CSP hash recalculated; tested (0 errors, 0 CSP violations, axe-core 0 violations at 1280×800 and 360×740).
+- **11 October 2026** — the message at the table no longer says "You is thinking…" (when the formal turn is yours but the action is resolved by the others, "Waiting for the other players…" appears, in all 7 languages); the solitaire "Moves" counter no longer resets on shuffle (it has its own counter, kept on shuffle, decreased on undo).
+- Accessibility: the tab bar is in a `nav` with a separate `tablist`, the Atlas card titles are `h2` (correct heading order), the support widget has the `complementary` role; axe-core: 0 violations at 1280×800 and 360×740. The script's CSP hash was recalculated. The app has no version number.
