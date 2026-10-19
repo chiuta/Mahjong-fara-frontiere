@@ -10,7 +10,7 @@ Atlas de variantes de mahjong, solitario con repartos garantizados resolubles y 
 
 **En línea:** https://chiuta.github.io/Mahjong-fara-frontiere/
 
-![Mahjong fără frontiere: solitario en la disposición «Rana»](screenshot.png)
+![Mahjong fără frontiere: solitario en la disposición «Rana»](screenshot.es.png)
 
 ## Qué es
 

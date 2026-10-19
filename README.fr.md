@@ -10,7 +10,7 @@ Atlas de variantes de mahjong, solitaire avec donnes garanties résolubles et ma
 
 **En ligne :** https://chiuta.github.io/Mahjong-fara-frontiere/
 
-![Mahjong fără frontiere : solitaire sur la disposition « Grenouille »](screenshot.png)
+![Mahjong fără frontiere : solitaire sur la disposition « Grenouille »](screenshot.fr.png)
 
 ## Ce que c'est
 

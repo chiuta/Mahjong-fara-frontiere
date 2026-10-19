@@ -10,7 +10,7 @@ Atlante di varianti del mahjong, solitario con distribuzioni garantite risolvibi
 
 **Online:** https://chiuta.github.io/Mahjong-fara-frontiere/
 
-![Mahjong fără frontiere: solitario sulla disposizione «Rana»](screenshot.png)
+![Mahjong fără frontiere: solitario sulla disposizione «Rana»](screenshot.it.png)
 
 ## Che cos'è
 

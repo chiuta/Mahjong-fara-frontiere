@@ -10,7 +10,7 @@ An atlas of mahjong variants, mahjong solitaire with guaranteed-solvable deals, 
 
 **Live:** https://chiuta.github.io/Mahjong-fara-frontiere/
 
-![Mahjong fără frontiere: solitaire on the "Frog" layout](screenshot.png)
+![Mahjong fără frontiere: solitaire on the "Frog" layout](screenshot.en.png)
 
 ## What it is
 

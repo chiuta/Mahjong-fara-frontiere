@@ -10,7 +10,7 @@ Atlas de variante de mahjong, solitaire cu înțelegeri garantat rezolvabile și
 
 **Live:** https://chiuta.github.io/Mahjong-fara-frontiere/
 
-![Mahjong fără frontiere: solitaire pe aranjamentul „Broasca”](screenshot.png)
+![Mahjong fără frontiere: solitaire pe aranjamentul „Broasca”](screenshot.ro.png)
 
 ## Ce este
 

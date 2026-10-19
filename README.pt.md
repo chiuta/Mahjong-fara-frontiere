@@ -10,7 +10,7 @@ Atlas de variantes de mahjong, paciência com distribuições garantidamente res
 
 **Online:** https://chiuta.github.io/Mahjong-fara-frontiere/
 
-![Mahjong fără frontiere: paciência na disposição «Rã»](screenshot.png)
+![Mahjong fără frontiere: paciência na disposição «Rã»](screenshot.pt.png)
 
 ## O que é
 

@@ -10,7 +10,7 @@ Atlas der Mahjong-Varianten, Solitaire mit garantiert lösbaren Blättern und Ma
 
 **Online:** https://chiuta.github.io/Mahjong-fara-frontiere/
 
-![Mahjong fără frontiere: Solitaire im Layout „Frosch“](screenshot.png)
+![Mahjong fără frontiere: Solitaire im Layout „Frosch“](screenshot.de.png)
 
 ## Was es ist
 

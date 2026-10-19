@@ -10,7 +10,7 @@ Mahdzsong-változatok atlasza, garantáltan megoldható kiosztású szolitér, v
 
 **Élő:** https://chiuta.github.io/Mahjong-fara-frontiere/
 
-![Mahjong fără frontiere: szolitér a „Béka” elrendezésen](screenshot.png)
+![Mahjong fără frontiere: szolitér a „Béka” elrendezésen](screenshot.hu.png)
 
 ## Mi ez
 
