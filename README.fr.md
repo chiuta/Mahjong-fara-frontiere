@@ -93,8 +93,7 @@ MIT — voir le fichier `LICENSE`.
 
 Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
-## Résumé en anglais
-
+## Résumé
 « Mahjong sans frontières » est une application HTML en un seul fichier, hors ligne : un atlas de huit variantes de mahjong, un mahjong solitaire avec huit dispositions dessinées par l'auteur et des donnes construites à l'envers (garanties résolubles), et un mahjong à quatre places contre trois IA heuristiques en trois variantes jouables — riichi japonais, Hong Kong et Sichuan. MCR, taïwanais, américain et à trois joueurs (sanma) sont réservés à l'atlas. Les tuiles sont dessinées en SVG avec une alternative automatique en lettres latines lorsque les glyphes chinois manquent. L'interface est en roumain, anglais, français, italien, espagnol, portugais, allemand et hongrois ; les textes longs (atlas, glossaire, notes de score) n'existent qu'en roumain et anglais et sont affichés en anglais, avec une petite note, dans les autres langues. L'IA ne triche pas (elle ne voit que l'information publique et sa propre main ; une option d'apprentissage explicite « montrer les mains de l'IA » est la seule exception). Chaque approximation de règle est signalée ⚠ dans l'application et dans le tableau ci-dessus. Aucun accès réseau, aucun pistage ; CSP stricte. Licence : MIT (voir LICENSE).
 
 ## Nouvelles fonctions (v1.1.0)

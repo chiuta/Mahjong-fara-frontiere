@@ -93,8 +93,7 @@ MIT — siehe die Datei `LICENSE`.
 
 Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
-## Zusammenfassung auf Englisch
-
+## Zusammenfassung
 „Mahjong ohne Grenzen“ ist eine Ein-Datei-HTML-App, offline: ein Atlas von acht Mahjong-Varianten, ein Mahjong-Solitaire mit acht selbst gezeichneten Layouts und rückwärts konstruierten (garantiert lösbaren) Blättern sowie Mahjong zu viert gegen drei heuristische KIs in drei spielbaren Varianten — japanisches Riichi, Hongkong und Sichuan. MCR, taiwanisches, amerikanisches und Drei-Personen-Mahjong (Sanma) gibt es nur im Atlas. Die Steine werden als SVG gezeichnet, mit automatischem Ersatz durch lateinische Buchstaben, wenn chinesische Glyphen fehlen. Die Oberfläche ist auf Rumänisch, Englisch, Französisch, Italienisch, Spanisch, Portugiesisch, Deutsch und Ungarisch; lange Texte (Atlas, Glossar, Wertungshinweise) gibt es nur auf Rumänisch und Englisch und werden in den anderen Sprachen auf Englisch mit einem kleinen Hinweis angezeigt. Die KI schummelt nicht (sie sieht nur öffentliche Informationen und ihre eigene Hand; eine ausdrückliche Lernoption „KI-Hände zeigen“ ist die einzige Ausnahme). Jede Regelannäherung ist in der App und in der Tabelle oben mit ⚠ gekennzeichnet. Kein Netzwerkzugriff, kein Tracking; strenge CSP. Lizenz: MIT (siehe LICENSE).
 
 ## Neue Funktionen (v1.1.0)

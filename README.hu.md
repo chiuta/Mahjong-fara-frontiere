@@ -93,8 +93,7 @@ MIT — lásd a `LICENSE` fájlt.
 
 Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
-## Összefoglaló angolul
-
+## Összefoglaló
 A „Mahdzsong határok nélkül” egyetlen fájlba zárt, offline HTML-alkalmazás: nyolc mahdzsong-változat atlasza, egy mahdzsong szolitér nyolc saját rajzolású elrendezéssel és visszafelé szerkesztett (garantáltan megoldható) kiosztásokkal, valamint négyszemélyes mahdzsong három heurisztikus MI ellen három játszható változatban — japán riichi, hongkongi és szecsuáni. Az MCR, a tajvani, az amerikai és a háromszemélyes (sanma) csak az atlaszban szerepel. A köveket SVG-ben rajzolja, a kínai glifák hiányakor automatikus latin betűs tartalékkal. A felület román, angol, francia, olasz, spanyol, portugál, német és magyar nyelvű; a hosszú szövegek (atlasz, szószedet, pontozási jegyzetek) csak románul és angolul léteznek, a többi nyelven angolul jelennek meg, egy kis megjegyzéssel. Az MI nem csal (csak a nyilvános információt és a saját kezét látja; a kifejezett tanulási opció, az „MI kezeinek megmutatása” az egyetlen kivétel). Minden szabályközelítés ⚠ jelöléssel szerepel az alkalmazásban és a fenti táblázatban. Hálózati hozzáférés és követés nélkül; szigorú CSP. Licenc: MIT (lásd LICENSE).
 
 ## Új funkciók (v1.1.0)

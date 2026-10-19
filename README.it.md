@@ -93,8 +93,7 @@ MIT — vedi il file `LICENSE`.
 
 Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
-## Riepilogo in inglese
-
+## Riepilogo
 «Mahjong senza frontiere» è un'app HTML in un unico file, offline: un atlante di otto varianti del mahjong, un mahjong solitario con otto disposizioni disegnate dall'autore e distribuzioni costruite al contrario (garantite risolvibili), e un mahjong a quattro posti contro tre IA euristiche in tre varianti giocabili — riichi giapponese, Hong Kong e Sichuan. MCR, taiwanese, americano e a tre giocatori (sanma) sono solo nell'atlante. Le tessere sono disegnate in SVG con un'alternativa automatica in lettere latine quando mancano i glifi cinesi. L'interfaccia è in rumeno, inglese, francese, italiano, spagnolo, portoghese, tedesco e ungherese; i testi lunghi (atlante, glossario, note sul punteggio) esistono solo in rumeno e inglese e sono mostrati in inglese, con una piccola nota, nelle altre lingue. L'IA non bara (vede solo le informazioni pubbliche e la propria mano; un'opzione esplicita di apprendimento «mostra le mani dell'IA» è l'unica eccezione). Ogni approssimazione delle regole è segnalata con ⚠ nell'app e nella tabella sopra. Nessun accesso alla rete, nessun tracciamento; CSP rigorosa. Licenza: MIT (vedi LICENSE).
 
 ## Nuove funzioni (v1.1.0)
