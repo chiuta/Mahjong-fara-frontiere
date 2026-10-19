@@ -93,9 +93,9 @@ MIT — vezi fișierul `LICENSE`.
 
 Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
-## English summary
+## Rezumat
 
-“Mahjong without borders” is a single-file, offline HTML app: an atlas of eight mahjong variants, a mahjong solitaire with eight self-drawn layouts and reverse-constructed (guaranteed solvable) deals, and four-seat mahjong against three heuristic AIs in three playable variants — Japanese riichi, Hong Kong and Sichuan. MCR, Taiwanese, American and three-player (sanma) are atlas-only. Tiles are drawn as SVG with an automatic Latin-letter fallback when Chinese glyphs are missing. The UI is in Romanian, English, French, Italian, Spanish, Portuguese and German; long texts (atlas, glossary, scoring notes) exist only in Romanian and English and are shown in English, with a small note, in the other languages. The AI does not cheat (it sees only public information and its own hand; an explicit “show AI hands” learning option is the only exception). Every rule approximation is marked ⚠ in the app and in the table above. No network access, no tracking; strict CSP. License: MIT (see LICENSE).
+„Mahjong fără frontiere” este o aplicație HTML offline într-un singur fișier: un atlas de opt variante de mahjong, un solitaire mahjong cu opt aranjamente desenate propriu și mâini construite invers (garantat rezolvabile), și mahjong pe patru locuri împotriva a trei AI-uri euristice în trei variante jucabile — riichi japonez, Hong Kong și Sichuan. MCR, taiwanez, american și pentru trei jucători (sanma) sunt doar în atlas. Piesele sunt desenate în SVG, cu rezervă automată în litere latine când lipsesc glifele chinezești. Interfața este în română, engleză, franceză, italiană, spaniolă, portugheză și germană; textele lungi (atlas, glosar, note de punctaj) există doar în română și engleză și sunt afișate în engleză, cu o mică notă, în celelalte limbi. AI-ul nu trișează (vede doar informațiile publice și propria mână; o opțiune explicită de învățare „arată mâinile AI” este singura excepție). Fiecare aproximare de regulă este marcată ⚠ în aplicație și în tabelul de mai sus. Fără acces la rețea, fără urmărire; CSP strict. Licență: MIT (vezi LICENSE).
 
 ## Funcții noi (v1.1.0)
 
