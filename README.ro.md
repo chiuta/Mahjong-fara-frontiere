@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.1.0 · **Ultima actualizare:** 2026-10-14
+**Versiune:** 1.2.0 · **Ultima actualizare:** 2026-10-19
+
+Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlas de variante de mahjong, solitaire cu înțelegeri garantat rezolvabile și mahjong cu 4 jucători contra 3 AI (riichi, Hong Kong, Sichuan) — un singur fișier HTML, offline, fără cont și fără rețea.
 
@@ -12,7 +14,7 @@ Atlas de variante de mahjong, solitaire cu înțelegeri garantat rezolvabile și
 
 ## Ce este
 
-O aplicație dintr-un singur fișier (`index.html`, ~263 KB) din seria „fără frontiere”. Are patru file: **Atlas** (fișe despre 8 variante), **Joacă** (jocurile), **Reguli și tabele** (tabelele de scor generate chiar din codul jocului) și **Despre**. Interfața este în română și, la alegere, în engleză, franceză, italiană, spaniolă, portugheză și germană.
+O aplicație dintr-un singur fișier (`index.html`, ~263 KB) din seria „fără frontiere”. Are patru file: **Atlas** (fișe despre 8 variante), **Joacă** (jocurile), **Reguli și tabele** (tabelele de scor generate chiar din codul jocului) și **Despre**. Interfața este în română și, la alegere, în engleză, franceză, italiană, spaniolă, portugheză, germană și maghiară.
 
 „Mahjong” este un termen generic. „Shanghai” este denumirea comercială a unui joc de solitaire din 1986; aici jocul se numește „Mahjong solitaire” (cunoscut comercial ca „Shanghai”); nicio marcă înregistrată nu apare în titluri.
 
@@ -28,8 +30,8 @@ O aplicație dintr-un singur fișier (`index.html`, ~263 KB) din seria „fără
 - Plăci desenate în SVG propriu (cercuri, bambus, caractere 一…九, vânturi 東南西北, dragoni 中發白, flori, anotimpuri), cu **detectare automată** a lipsei glifelor chinezești și **alternativă cu litere latine** (se poate alege și manual din antet).
 - Temă întunecată/luminoasă, tastatură completă (săgeți, Enter/Spațiu), anunțuri pentru cititoare de ecran, țintele tactile ≥ 44 px, `prefers-reduced-motion`, 390 px fără derulare orizontală.
 - Statistici simple, salvate local, doar în browserul tău; în fila **Despre** butonul „Șterge statisticile locale” le elimină (cu confirmare).
-- **Scurtături la solitaire** (cu focusul pe tablă): `H` sugestie, `U` sau `Ctrl+Z` anulează, `S` amestecă, în plus față de săgeți și Enter/Spațiu; lista apare sub tablă, în cele 7 limbi.
-- **Partida de solitaire se salvează automat** (după fiecare mutare, anulare sau amestecare) și poate fi reluată din fila **Joacă** cu butonul „↻ Continuă jocul salvat”, în cele 7 limbi. Salvarea este validată la citire (aranjament existent, perechi complete, istoric coerent); date corupte sunt ignorate. „Șterge statisticile locale” șterge și partida salvată.
+- **Scurtături la solitaire** (cu focusul pe tablă): `H` sugestie, `U` sau `Ctrl+Z` anulează, `S` amestecă, în plus față de săgeți și Enter/Spațiu; lista apare sub tablă, în cele 8 limbi.
+- **Partida de solitaire se salvează automat** (după fiecare mutare, anulare sau amestecare) și poate fi reluată din fila **Joacă** cu butonul „↻ Continuă jocul salvat”, în cele 8 limbi. Salvarea este validată la citire (aranjament existent, perechi complete, istoric coerent); date corupte sunt ignorate. „Șterge statisticile locale” șterge și partida salvată.
 
 ## Variante
 
@@ -61,15 +63,15 @@ Nimic nu pleacă din browser: fără fetch/XHR, fără telemetrie, fără fontur
 
 - **Nu este un produs complet de competiție.** Fiecare variantă are aproximări ⚠ (tabelul de mai sus și fișele din aplicație). Reguli regionale diferă: la Hong Kong s-a implementat tabelul „half spicy” și plata la aruncare ca opțiune; la riichi, „atamahane” (un singur câștigător la aruncare); la Sichuan, fără schimbul de plăci.
 - **AI-ul este slab-spre-mediu.** Nu are modele de adversar, nu joacă riichi-ul ofensiv/defensiv la nivel de expert și nu calculează probabilități complete. Contra unei baze aleatoare (60 de jocuri pe variantă, locul AI-ului rotit): câștigă pe mână ~52,8% la riichi, ~29,1% la Hong Kong (cu bazele aleatoare aproape toate mâinile sunt remize, iar remiza repetă dealerul, deci jocurile sunt foarte lungi; măsura e slabă) și ~71,3% la Sichuan (paritate = 25%). Între AI-uri partidele sunt foarte agresive (~89% din mâinile de riichi se termină cu câștig).
-- Textele lungi (atlas, glosar, notele de scor) există doar în **română și engleză**; în celelalte 5 limbi se afișează textul în engleză, cu o notă discretă („text în engleză”). Elementele de interfață sunt traduse în toate cele 7 limbi (paritate verificată de script).
+- Textele lungi (atlas, glosar, notele de scor) există doar în **română și engleză**; în celelalte 6 limbi se afișează textul în engleză, cu o notă discretă („text în engleză”). Elementele de interfață sunt traduse în toate cele 8 limbi (paritate verificată de script).
 - La Hong Kong, remiza păstrează dealerul (regulă obișnuită): cu un faan minim mare și adversari pasivi jocul poate dura mult; coboară faan-ul minim sau alege „o singură mână”.
 - „O singură mână” oprește jocul după prima mână (nu după rotația dealerului).
-- Traducerile din franceză, italiană, spaniolă, portugheză și germană sunt făcute fără verificare de către vorbitori nativi.
+- Traducerile din franceză, italiană, spaniolă, portugheză, germană și maghiară sunt făcute fără verificare de către vorbitori nativi.
 - Cu fonturi fără glife chinezești se trece automat pe litere latine; dacă detecția greșește, folosește selectorul din antet.
 
 ## Teste (în afara pachetului: `scratchpad/new/games_work/Mahjong-fara-frontiere/`)
 
-Rezumat; comenzi și rezultate complete în raportul `new/reports/Mahjong-fara-frontiere.md`. Mâna câștigătoare (4 seturi + pereche, 7 perechi, 13 orfani) comparată cu o implementare de referință prin forță brută pe mii de mâini; tabelul de puncte riichi (111 celule) și exemple lucrate din Wikipedia și sloperama; invariantul numărului de plăci; ≥300 de partide AI contra AI per variantă fără erori; 1000 de înțelegeri solitaire reluate până la tabla goală; verificare că AI-ul nu vede informație ascunsă; verificare Playwright/Chromium a interfeței (toate aranjamentele, toate variantele, 7 limbi, 390 px).
+Rezumat; comenzi și rezultate complete în raportul `new/reports/Mahjong-fara-frontiere.md`. Mâna câștigătoare (4 seturi + pereche, 7 perechi, 13 orfani) comparată cu o implementare de referință prin forță brută pe mii de mâini; tabelul de puncte riichi (111 celule) și exemple lucrate din Wikipedia și sloperama; invariantul numărului de plăci; ≥300 de partide AI contra AI per variantă fără erori; 1000 de înțelegeri solitaire reluate până la tabla goală; verificare că AI-ul nu vede informație ascunsă; verificare Playwright/Chromium a interfeței (toate aranjamentele, toate variantele, 8 limbi, 390 px).
 
 ## Audit independent (rezumat)
 

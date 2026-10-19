@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.1.0 · **Utolsó frissítés:** 2026-10-14
+**Verzió:** 1.2.0 · **Utolsó frissítés:** 2026-10-19
+
+A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Mahdzsong-változatok atlasza, garantáltan megoldható kiosztású szolitér, valamint 4 játékosos mahdzsong 3 MI ellen (riichi, hongkongi, szecsuáni) — egyetlen HTML-fájl, offline, fiók és hálózat nélkül.
 
@@ -12,7 +14,7 @@ Mahdzsong-változatok atlasza, garantáltan megoldható kiosztású szolitér, v
 
 ## Mi ez
 
-Egyetlen fájlból álló alkalmazás (`index.html`, ~263 KB) a „határok nélkül” sorozatból. Négy lapja van: **Atlasz** (kártyák 8 változatról), **Játék** (a játékok), **Szabályok és táblázatok** (a pontozási táblázatok közvetlenül a játék kódjából generálva) és **Névjegy**. A felület román nyelvű, és tetszés szerint angol, francia, olasz, spanyol, portugál és német nyelvű is lehet.
+Egyetlen fájlból álló alkalmazás (`index.html`, ~263 KB) a „határok nélkül” sorozatból. Négy lapja van: **Atlasz** (kártyák 8 változatról), **Játék** (a játékok), **Szabályok és táblázatok** (a pontozási táblázatok közvetlenül a játék kódjából generálva) és **Névjegy**. A felület román nyelvű, és tetszés szerint angol, francia, olasz, spanyol, portugál, német és magyar nyelvű is lehet.
 
 A „mahdzsong” gyűjtőfogalom. A „Shanghai” egy 1986-os szolitérjáték kereskedelmi neve; itt a játék neve „Mahdzsong szolitér” (kereskedelmi néven „Shanghai”); a címekben nem szerepel bejegyzett védjegy.
 
@@ -28,8 +30,8 @@ A „mahdzsong” gyűjtőfogalom. A „Shanghai” egy 1986-os szolitérjáték
 - Saját SVG-ben rajzolt kövek (körök, bambusz, karakterek 一…九, szelek 東南西北, sárkányok 中發白, virágok, évszakok), a hiányzó kínai glifák **automatikus felismerésével** és **latin betűs tartalékkal** (a fejlécből kézzel is kiválasztható).
 - Sötét/világos téma, teljes billentyűzetkezelés (nyilak, Enter/Szóköz), bejelentések képernyőolvasókhoz, érintési célpontok ≥ 44 px, `prefers-reduced-motion`, 390 px vízszintes görgetés nélkül.
 - Egyszerű statisztikák, helyben mentve, csak a böngésződben; a **Névjegy** lapon a „Helyi statisztikák törlése” gomb eltávolítja őket (megerősítéssel).
-- **Szolitér-billentyűparancsok** (a táblán lévő fókusszal): `H` tipp, `U` vagy `Ctrl+Z` visszavonás, `S` keverés, a nyilak és az Enter/Szóköz mellett; a lista a tábla alatt jelenik meg, a 7 nyelven.
-- **A szolitérjáték automatikusan mentődik** (minden lépés, visszavonás vagy keverés után), és a **Játék** lapról a „↻ Mentett játék folytatása” gombbal folytatható, a 7 nyelven. A mentést beolvasáskor ellenőrzi (létező elrendezés, teljes párok, következetes előzmények); a sérült adatokat figyelmen kívül hagyja. A „Helyi statisztikák törlése” a mentett játékot is törli.
+- **Szolitér-billentyűparancsok** (a táblán lévő fókusszal): `H` tipp, `U` vagy `Ctrl+Z` visszavonás, `S` keverés, a nyilak és az Enter/Szóköz mellett; a lista a tábla alatt jelenik meg, a 8 nyelven.
+- **A szolitérjáték automatikusan mentődik** (minden lépés, visszavonás vagy keverés után), és a **Játék** lapról a „↻ Mentett játék folytatása” gombbal folytatható, a 8 nyelven. A mentést beolvasáskor ellenőrzi (létező elrendezés, teljes párok, következetes előzmények); a sérült adatokat figyelmen kívül hagyja. A „Helyi statisztikák törlése” a mentett játékot is törli.
 
 ## Változatok
 
@@ -61,15 +63,15 @@ Semmi sem hagyja el a böngészőt: nincs fetch/XHR, nincs telemetria, nincsenek
 
 - **Nem teljes értékű versenytermék.** Minden változatnak vannak ⚠ közelítései (a fenti táblázat és az alkalmazás kártyái). A regionális szabályok eltérnek: Hongkongban a „half spicy” táblázatot és a dobáskori fizetést opcióként valósították meg; riichinél az „atamahane”-t (dobásnál egyetlen nyertes); Szecsuánban nincs kőcsere.
 - **Az MI gyenge-közepes.** Nincsenek ellenfélmodelljei, a riichit nem játssza szakértői szinten támadóan/védekezően, és nem számít teljes valószínűségeket. Véletlen alapvonal ellen (változatonként 60 játék, az MI helye forgatva): kezenként ~52,8%-ot nyer riichinél, ~29,1%-ot Hongkongban (a véletlen alapvonalaknál szinte minden kéz döntetlen, a döntetlen pedig megismétli az osztót, így a játékok nagyon hosszúak; a mérték gyenge) és ~71,3%-ot Szecsuánban (paritás = 25%). Az MI-k között a játszmák nagyon agresszívak (a riichi-kezek ~89%-a nyeréssel végződik).
-- A hosszú szövegek (atlasz, szószedet, pontozási jegyzetek) csak **románul és angolul** léteznek; a másik 5 nyelven a szöveg angolul jelenik meg, diszkrét megjegyzéssel („szöveg angolul”). A felületi elemek mind a 7 nyelvre le vannak fordítva (a paritást szkript ellenőrzi).
+- A hosszú szövegek (atlasz, szószedet, pontozási jegyzetek) csak **románul és angolul** léteznek; a másik 6 nyelven a szöveg angolul jelenik meg, diszkrét megjegyzéssel („szöveg angolul”). A felületi elemek mind a 8 nyelvre le vannak fordítva (a paritást szkript ellenőrzi).
 - Hongkongban a döntetlen megtartja az osztót (szokásos szabály): magas minimális faan és passzív ellenfelek esetén a játék sokáig tarthat; csökkentsd a minimális faant, vagy válaszd az „egyetlen kéz” lehetőséget.
 - Az „egyetlen kéz” az első kéz után állítja le a játékot (nem az osztóforgás után).
-- A francia, olasz, spanyol, portugál és német fordításokat anyanyelvi beszélők ellenőrzése nélkül készítették.
+- A francia, olasz, spanyol, portugál, német és magyar fordításokat anyanyelvi beszélők ellenőrzése nélkül készítették.
 - Kínai glifák nélküli betűtípusoknál automatikusan latin betűkre vált; ha a felismerés téved, használd a fejlécben lévő választót.
 
 ## Tesztek (a csomagon kívül: `scratchpad/new/games_work/Mahjong-fara-frontiere/`)
 
-Összefoglaló; a parancsok és a teljes eredmények a `new/reports/Mahjong-fara-frontiere.md` jelentésben. A nyerő kezet (4 szett + pár, 7 pár, 13 árva) nyers erővel működő referencia-implementációval hasonlították össze több ezer kézen; a riichi pontozási táblázat (111 cella) és a Wikipédiából és a sloperamáról származó kidolgozott példák; a kövek számának invariánsa; változatonként ≥300 MI-MI játszma hiba nélkül; 1000 szolitér-kiosztás visszajátszva az üres tábláig; annak ellenőrzése, hogy az MI nem lát rejtett információt; a felület Playwright/Chromium-ellenőrzése (minden elrendezés, minden változat, 7 nyelv, 390 px).
+Összefoglaló; a parancsok és a teljes eredmények a `new/reports/Mahjong-fara-frontiere.md` jelentésben. A nyerő kezet (4 szett + pár, 7 pár, 13 árva) nyers erővel működő referencia-implementációval hasonlították össze több ezer kézen; a riichi pontozási táblázat (111 cella) és a Wikipédiából és a sloperamáról származó kidolgozott példák; a kövek számának invariánsa; változatonként ≥300 MI-MI játszma hiba nélkül; 1000 szolitér-kiosztás visszajátszva az üres tábláig; annak ellenőrzése, hogy az MI nem lát rejtett információt; a felület Playwright/Chromium-ellenőrzése (minden elrendezés, minden változat, 8 nyelv, 390 px).
 
 ## Független audit (összefoglaló)
 
@@ -93,7 +95,7 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
 ## Összefoglaló angolul
 
-A „Mahdzsong határok nélkül” egyetlen fájlba zárt, offline HTML-alkalmazás: nyolc mahdzsong-változat atlasza, egy mahdzsong szolitér nyolc saját rajzolású elrendezéssel és visszafelé szerkesztett (garantáltan megoldható) kiosztásokkal, valamint négyszemélyes mahdzsong három heurisztikus MI ellen három játszható változatban — japán riichi, hongkongi és szecsuáni. Az MCR, a tajvani, az amerikai és a háromszemélyes (sanma) csak az atlaszban szerepel. A köveket SVG-ben rajzolja, a kínai glifák hiányakor automatikus latin betűs tartalékkal. A felület román, angol, francia, olasz, spanyol, portugál és német nyelvű; a hosszú szövegek (atlasz, szószedet, pontozási jegyzetek) csak románul és angolul léteznek, a többi nyelven angolul jelennek meg, egy kis megjegyzéssel. Az MI nem csal (csak a nyilvános információt és a saját kezét látja; a kifejezett tanulási opció, az „MI kezeinek megmutatása” az egyetlen kivétel). Minden szabályközelítés ⚠ jelöléssel szerepel az alkalmazásban és a fenti táblázatban. Hálózati hozzáférés és követés nélkül; szigorú CSP. Licenc: MIT (lásd LICENSE).
+A „Mahdzsong határok nélkül” egyetlen fájlba zárt, offline HTML-alkalmazás: nyolc mahdzsong-változat atlasza, egy mahdzsong szolitér nyolc saját rajzolású elrendezéssel és visszafelé szerkesztett (garantáltan megoldható) kiosztásokkal, valamint négyszemélyes mahdzsong három heurisztikus MI ellen három játszható változatban — japán riichi, hongkongi és szecsuáni. Az MCR, a tajvani, az amerikai és a háromszemélyes (sanma) csak az atlaszban szerepel. A köveket SVG-ben rajzolja, a kínai glifák hiányakor automatikus latin betűs tartalékkal. A felület román, angol, francia, olasz, spanyol, portugál, német és magyar nyelvű; a hosszú szövegek (atlasz, szószedet, pontozási jegyzetek) csak románul és angolul léteznek, a többi nyelven angolul jelennek meg, egy kis megjegyzéssel. Az MI nem csal (csak a nyilvános információt és a saját kezét látja; a kifejezett tanulási opció, az „MI kezeinek megmutatása” az egyetlen kivétel). Minden szabályközelítés ⚠ jelöléssel szerepel az alkalmazásban és a fenti táblázatban. Hálózati hozzáférés és követés nélkül; szigorú CSP. Licenc: MIT (lásd LICENSE).
 
 ## Új funkciók (v1.1.0)
 

@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.1.0 · **Última actualización:** 2026-10-14
+**Versión:** 1.2.0 · **Última actualización:** 2026-10-19
+
+Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlas de variantes de mahjong, solitario con repartos garantizados resolubles y mahjong de 4 jugadores contra 3 IA (riichi, Hong Kong, Sichuan) — un único archivo HTML, sin conexión, sin cuenta y sin red.
 
@@ -12,7 +14,7 @@ Atlas de variantes de mahjong, solitario con repartos garantizados resolubles y 
 
 ## Qué es
 
-Una aplicación de un solo archivo (`index.html`, ~263 KB) de la serie «sin fronteras». Tiene cuatro pestañas: **Atlas** (fichas sobre 8 variantes), **Jugar** (los juegos), **Reglas y tablas** (las tablas de puntuación generadas directamente a partir del código del juego) y **Acerca de**. La interfaz está en rumano y, a elección, en inglés, francés, italiano, español, portugués y alemán.
+Una aplicación de un solo archivo (`index.html`, ~263 KB) de la serie «sin fronteras». Tiene cuatro pestañas: **Atlas** (fichas sobre 8 variantes), **Jugar** (los juegos), **Reglas y tablas** (las tablas de puntuación generadas directamente a partir del código del juego) y **Acerca de**. La interfaz está en rumano y, a elección, en inglés, francés, italiano, español, portugués, alemán y húngaro.
 
 «Mahjong» es un término genérico. «Shanghai» es el nombre comercial de un juego de solitario de 1986; aquí el juego se llama «Mahjong solitario» (conocido comercialmente como «Shanghai»); ninguna marca registrada aparece en los títulos.
 
@@ -28,8 +30,8 @@ Una aplicación de un solo archivo (`index.html`, ~263 KB) de la serie «sin fro
 - Fichas dibujadas en SVG propio (círculos, bambú, caracteres 一…九, vientos 東南西北, dragones 中發白, flores, estaciones), con **detección automática** de la falta de glifos chinos y **alternativa con letras latinas** (también se puede elegir manualmente desde la cabecera).
 - Tema oscuro/claro, teclado completo (flechas, Intro/Espacio), anuncios para lectores de pantalla, objetivos táctiles ≥ 44 px, `prefers-reduced-motion`, 390 px sin desplazamiento horizontal.
 - Estadísticas sencillas, guardadas en local, solo en tu navegador; en la pestaña **Acerca de** el botón «Borrar las estadísticas locales» las elimina (con confirmación).
-- **Atajos en el solitario** (con el foco en el tablero): `H` pista, `U` o `Ctrl+Z` deshacer, `S` mezclar, además de las flechas e Intro/Espacio; la lista aparece bajo el tablero, en los 7 idiomas.
-- **La partida de solitario se guarda automáticamente** (tras cada jugada, deshacer o mezcla) y se puede reanudar desde la pestaña **Jugar** con el botón «↻ Continuar la partida guardada», en los 7 idiomas. El guardado se valida al leerlo (disposición existente, parejas completas, historial coherente); los datos corruptos se ignoran. «Borrar las estadísticas locales» borra también la partida guardada.
+- **Atajos en el solitario** (con el foco en el tablero): `H` pista, `U` o `Ctrl+Z` deshacer, `S` mezclar, además de las flechas e Intro/Espacio; la lista aparece bajo el tablero, en los 8 idiomas.
+- **La partida de solitario se guarda automáticamente** (tras cada jugada, deshacer o mezcla) y se puede reanudar desde la pestaña **Jugar** con el botón «↻ Continuar la partida guardada», en los 8 idiomas. El guardado se valida al leerlo (disposición existente, parejas completas, historial coherente); los datos corruptos se ignoran. «Borrar las estadísticas locales» borra también la partida guardada.
 
 ## Variantes
 
@@ -61,15 +63,15 @@ Nada sale del navegador: sin fetch/XHR, sin telemetría, sin fuentes ni scripts 
 
 - **No es un producto de competición completo.** Cada variante tiene aproximaciones ⚠ (la tabla de arriba y las fichas de la aplicación). Las reglas regionales difieren: en Hong Kong se implementó la tabla «half spicy» y el pago al descartar como opción; en riichi, «atamahane» (un único ganador al descartar); en Sichuan, sin intercambio de fichas.
 - **La IA es de nivel débil a medio.** No tiene modelos del adversario, no juega el riichi ofensivo/defensivo a nivel experto y no calcula probabilidades completas. Contra una base aleatoria (60 partidas por variante, con el asiento de la IA rotado): gana por mano ~52,8 % en riichi, ~29,1 % en Hong Kong (con las bases aleatorias casi todas las manos son empates, y el empate repite al dealer, por lo que las partidas son muy largas; la medida es débil) y ~71,3 % en Sichuan (paridad = 25 %). Entre IA las partidas son muy agresivas (~89 % de las manos de riichi terminan con una victoria).
-- Los textos largos (atlas, glosario, notas de puntuación) existen solo en **rumano e inglés**; en los otros 5 idiomas se muestra el texto en inglés, con una nota discreta («texto en inglés»). Los elementos de la interfaz están traducidos a los 7 idiomas (paridad verificada por script).
+- Los textos largos (atlas, glosario, notas de puntuación) existen solo en **rumano e inglés**; en los otros 6 idiomas se muestra el texto en inglés, con una nota discreta («texto en inglés»). Los elementos de la interfaz están traducidos a los 8 idiomas (paridad verificada por script).
 - En Hong Kong, el empate mantiene al dealer (regla habitual): con un faan mínimo alto y adversarios pasivos la partida puede durar mucho; baja el faan mínimo o elige «una sola mano».
 - «Una sola mano» detiene el juego tras la primera mano (no tras la rotación del dealer).
-- Las traducciones al francés, italiano, español, portugués y alemán se hicieron sin verificación por hablantes nativos.
+- Las traducciones al francés, italiano, español, portugués, alemán y húngaro se hicieron sin verificación por hablantes nativos.
 - Con fuentes sin glifos chinos se pasa automáticamente a letras latinas; si la detección se equivoca, usa el selector de la cabecera.
 
 ## Pruebas (fuera del paquete: `scratchpad/new/games_work/Mahjong-fara-frontiere/`)
 
-Resumen; comandos y resultados completos en el informe `new/reports/Mahjong-fara-frontiere.md`. Mano ganadora (4 grupos + pareja, 7 parejas, 13 huérfanos) comparada con una implementación de referencia por fuerza bruta en miles de manos; tabla de puntos de riichi (111 celdas) y ejemplos resueltos de Wikipedia y sloperama; invariante del número de fichas; ≥300 partidas IA contra IA por variante sin errores; 1000 repartos de solitario rejugados hasta el tablero vacío; verificación de que la IA no ve información oculta; verificación con Playwright/Chromium de la interfaz (todas las disposiciones, todas las variantes, 7 idiomas, 390 px).
+Resumen; comandos y resultados completos en el informe `new/reports/Mahjong-fara-frontiere.md`. Mano ganadora (4 grupos + pareja, 7 parejas, 13 huérfanos) comparada con una implementación de referencia por fuerza bruta en miles de manos; tabla de puntos de riichi (111 celdas) y ejemplos resueltos de Wikipedia y sloperama; invariante del número de fichas; ≥300 partidas IA contra IA por variante sin errores; 1000 repartos de solitario rejugados hasta el tablero vacío; verificación de que la IA no ve información oculta; verificación con Playwright/Chromium de la interfaz (todas las disposiciones, todas las variantes, 8 idiomas, 390 px).
 
 ## Auditoría independiente (resumen)
 
@@ -93,7 +95,7 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
 ## Resumen en inglés
 
-«Mahjong sin fronteras» es una aplicación HTML de un solo archivo, sin conexión: un atlas de ocho variantes de mahjong, un mahjong solitario con ocho disposiciones dibujadas por el autor y repartos construidos a la inversa (garantizados resolubles), y un mahjong de cuatro asientos contra tres IA heurísticas en tres variantes jugables — riichi japonés, Hong Kong y Sichuan. MCR, taiwanés, americano y de tres jugadores (sanma) son solo del atlas. Las fichas se dibujan en SVG con una alternativa automática de letras latinas cuando faltan los glifos chinos. La interfaz está en rumano, inglés, francés, italiano, español, portugués y alemán; los textos largos (atlas, glosario, notas de puntuación) existen solo en rumano e inglés y se muestran en inglés, con una pequeña nota, en los demás idiomas. La IA no hace trampa (solo ve la información pública y su propia mano; una opción explícita de aprendizaje «mostrar las manos de la IA» es la única excepción). Cada aproximación de reglas está marcada con ⚠ en la aplicación y en la tabla de arriba. Sin acceso a la red, sin rastreo; CSP estricta. Licencia: MIT (véase LICENSE).
+«Mahjong sin fronteras» es una aplicación HTML de un solo archivo, sin conexión: un atlas de ocho variantes de mahjong, un mahjong solitario con ocho disposiciones dibujadas por el autor y repartos construidos a la inversa (garantizados resolubles), y un mahjong de cuatro asientos contra tres IA heurísticas en tres variantes jugables — riichi japonés, Hong Kong y Sichuan. MCR, taiwanés, americano y de tres jugadores (sanma) son solo del atlas. Las fichas se dibujan en SVG con una alternativa automática de letras latinas cuando faltan los glifos chinos. La interfaz está en rumano, inglés, francés, italiano, español, portugués, alemán y húngaro; los textos largos (atlas, glosario, notas de puntuación) existen solo en rumano e inglés y se muestran en inglés, con una pequeña nota, en los demás idiomas. La IA no hace trampa (solo ve la información pública y su propia mano; una opción explícita de aprendizaje «mostrar las manos de la IA» es la única excepción). Cada aproximación de reglas está marcada con ⚠ en la aplicación y en la tabla de arriba. Sin acceso a la red, sin rastreo; CSP estricta. Licencia: MIT (véase LICENSE).
 
 ## Funciones nuevas (v1.1.0)
 

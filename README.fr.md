@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.1.0 · **Dernière mise à jour :** 2026-10-14
+**Version :** 1.2.0 · **Dernière mise à jour :** 2026-10-19
+
+Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlas de variantes de mahjong, solitaire avec donnes garanties résolubles et mahjong à 4 joueurs contre 3 IA (riichi, Hong Kong, Sichuan) — un seul fichier HTML, hors ligne, sans compte et sans réseau.
 
@@ -12,7 +14,7 @@ Atlas de variantes de mahjong, solitaire avec donnes garanties résolubles et ma
 
 ## Ce que c'est
 
-Une application en un seul fichier (`index.html`, ~263 Ko) de la série « sans frontières ». Elle comporte quatre onglets : **Atlas** (fiches sur 8 variantes), **Jouer** (les jeux), **Règles et tableaux** (les tableaux de score générés directement à partir du code du jeu) et **À propos**. L'interface est en roumain et, au choix, en anglais, français, italien, espagnol, portugais et allemand.
+Une application en un seul fichier (`index.html`, ~263 Ko) de la série « sans frontières ». Elle comporte quatre onglets : **Atlas** (fiches sur 8 variantes), **Jouer** (les jeux), **Règles et tableaux** (les tableaux de score générés directement à partir du code du jeu) et **À propos**. L'interface est en roumain et, au choix, en anglais, français, italien, espagnol, portugais, allemand et hongrois.
 
 « Mahjong » est un terme générique. « Shanghai » est le nom commercial d'un jeu de solitaire de 1986 ; ici le jeu s'appelle « Mahjong solitaire » (connu commercialement sous le nom de « Shanghai ») ; aucune marque déposée n'apparaît dans les titres.
 
@@ -28,8 +30,8 @@ Une application en un seul fichier (`index.html`, ~263 Ko) de la série « sans 
 - Tuiles dessinées en SVG propre (cercles, bambous, caractères 一…九, vents 東南西北, dragons 中發白, fleurs, saisons), avec **détection automatique** de l'absence de glyphes chinois et **alternative en lettres latines** (on peut aussi la choisir manuellement depuis l'en-tête).
 - Thème sombre/clair, clavier complet (flèches, Entrée/Espace), annonces pour lecteurs d'écran, cibles tactiles ≥ 44 px, `prefers-reduced-motion`, 390 px sans défilement horizontal.
 - Statistiques simples, enregistrées en local, uniquement dans votre navigateur ; dans l'onglet **À propos**, le bouton « Effacer les statistiques locales » les supprime (avec confirmation).
-- **Raccourcis au solitaire** (focus sur le plateau) : `H` suggestion, `U` ou `Ctrl+Z` annule, `S` mélange, en plus des flèches et d'Entrée/Espace ; la liste apparaît sous le plateau, dans les 7 langues.
-- **La partie de solitaire est enregistrée automatiquement** (après chaque coup, annulation ou mélange) et peut être reprise depuis l'onglet **Jouer** avec le bouton « ↻ Continuer la partie enregistrée », dans les 7 langues. La sauvegarde est validée à la lecture (disposition existante, paires complètes, historique cohérent) ; les données corrompues sont ignorées. « Effacer les statistiques locales » efface aussi la partie enregistrée.
+- **Raccourcis au solitaire** (focus sur le plateau) : `H` suggestion, `U` ou `Ctrl+Z` annule, `S` mélange, en plus des flèches et d'Entrée/Espace ; la liste apparaît sous le plateau, dans les 8 langues.
+- **La partie de solitaire est enregistrée automatiquement** (après chaque coup, annulation ou mélange) et peut être reprise depuis l'onglet **Jouer** avec le bouton « ↻ Continuer la partie enregistrée », dans les 8 langues. La sauvegarde est validée à la lecture (disposition existante, paires complètes, historique cohérent) ; les données corrompues sont ignorées. « Effacer les statistiques locales » efface aussi la partie enregistrée.
 
 ## Variantes
 
@@ -61,15 +63,15 @@ Rien ne quitte le navigateur : pas de fetch/XHR, pas de télémétrie, pas de po
 
 - **Ce n'est pas un produit de compétition complet.** Chaque variante comporte des approximations ⚠ (le tableau ci-dessus et les fiches de l'application). Les règles régionales diffèrent : à Hong Kong, on a implémenté le tableau « half spicy » et le paiement à la défausse comme option ; au riichi, « atamahane » (un seul gagnant à la défausse) ; au Sichuan, pas d'échange de tuiles.
 - **L'IA est de niveau faible à moyen.** Elle n'a pas de modèles d'adversaire, ne joue pas le riichi offensif/défensif au niveau expert et ne calcule pas de probabilités complètes. Contre une base aléatoire (60 parties par variante, place de l'IA tournante) : elle gagne par main ~52,8 % au riichi, ~29,1 % à Hong Kong (avec les bases aléatoires, presque toutes les mains sont nulles, et la partie nulle répète le donneur, donc les parties sont très longues ; la mesure est faible) et ~71,3 % au Sichuan (parité = 25 %). Entre IA, les parties sont très agressives (~89 % des mains de riichi se terminent par une victoire).
-- Les textes longs (atlas, glossaire, notes de score) n'existent qu'en **roumain et anglais** ; dans les 5 autres langues, le texte est affiché en anglais, avec une note discrète (« texte en anglais »). Les éléments d'interface sont traduits dans les 7 langues (parité vérifiée par script).
+- Les textes longs (atlas, glossaire, notes de score) n'existent qu'en **roumain et anglais** ; dans les 6 autres langues, le texte est affiché en anglais, avec une note discrète (« texte en anglais »). Les éléments d'interface sont traduits dans les 8 langues (parité vérifiée par script).
 - À Hong Kong, la partie nulle conserve le donneur (règle habituelle) : avec un faan minimum élevé et des adversaires passifs, la partie peut durer longtemps ; baissez le faan minimum ou choisissez « une seule main ».
 - « Une seule main » arrête le jeu après la première main (et non après la rotation du donneur).
-- Les traductions en français, italien, espagnol, portugais et allemand ont été faites sans vérification par des locuteurs natifs.
+- Les traductions en français, italien, espagnol, portugais, allemand et hongrois ont été faites sans vérification par des locuteurs natifs.
 - Avec des polices sans glyphes chinois, on passe automatiquement aux lettres latines ; si la détection se trompe, utilisez le sélecteur de l'en-tête.
 
 ## Tests (hors du paquet : `scratchpad/new/games_work/Mahjong-fara-frontiere/`)
 
-Résumé ; commandes et résultats complets dans le rapport `new/reports/Mahjong-fara-frontiere.md`. Main gagnante (4 groupes + paire, 7 paires, 13 orphelins) comparée à une implémentation de référence par force brute sur des milliers de mains ; tableau de points du riichi (111 cellules) et exemples traités de Wikipédia et de sloperama ; invariant du nombre de tuiles ; ≥300 parties IA contre IA par variante sans erreur ; 1000 donnes de solitaire rejouées jusqu'au plateau vide ; vérification que l'IA ne voit pas d'information cachée ; vérification Playwright/Chromium de l'interface (toutes les dispositions, toutes les variantes, 7 langues, 390 px).
+Résumé ; commandes et résultats complets dans le rapport `new/reports/Mahjong-fara-frontiere.md`. Main gagnante (4 groupes + paire, 7 paires, 13 orphelins) comparée à une implémentation de référence par force brute sur des milliers de mains ; tableau de points du riichi (111 cellules) et exemples traités de Wikipédia et de sloperama ; invariant du nombre de tuiles ; ≥300 parties IA contre IA par variante sans erreur ; 1000 donnes de solitaire rejouées jusqu'au plateau vide ; vérification que l'IA ne voit pas d'information cachée ; vérification Playwright/Chromium de l'interface (toutes les dispositions, toutes les variantes, 8 langues, 390 px).
 
 ## Audit indépendant (résumé)
 
@@ -93,7 +95,7 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
 ## Résumé en anglais
 
-« Mahjong sans frontières » est une application HTML en un seul fichier, hors ligne : un atlas de huit variantes de mahjong, un mahjong solitaire avec huit dispositions dessinées par l'auteur et des donnes construites à l'envers (garanties résolubles), et un mahjong à quatre places contre trois IA heuristiques en trois variantes jouables — riichi japonais, Hong Kong et Sichuan. MCR, taïwanais, américain et à trois joueurs (sanma) sont réservés à l'atlas. Les tuiles sont dessinées en SVG avec une alternative automatique en lettres latines lorsque les glyphes chinois manquent. L'interface est en roumain, anglais, français, italien, espagnol, portugais et allemand ; les textes longs (atlas, glossaire, notes de score) n'existent qu'en roumain et anglais et sont affichés en anglais, avec une petite note, dans les autres langues. L'IA ne triche pas (elle ne voit que l'information publique et sa propre main ; une option d'apprentissage explicite « montrer les mains de l'IA » est la seule exception). Chaque approximation de règle est signalée ⚠ dans l'application et dans le tableau ci-dessus. Aucun accès réseau, aucun pistage ; CSP stricte. Licence : MIT (voir LICENSE).
+« Mahjong sans frontières » est une application HTML en un seul fichier, hors ligne : un atlas de huit variantes de mahjong, un mahjong solitaire avec huit dispositions dessinées par l'auteur et des donnes construites à l'envers (garanties résolubles), et un mahjong à quatre places contre trois IA heuristiques en trois variantes jouables — riichi japonais, Hong Kong et Sichuan. MCR, taïwanais, américain et à trois joueurs (sanma) sont réservés à l'atlas. Les tuiles sont dessinées en SVG avec une alternative automatique en lettres latines lorsque les glyphes chinois manquent. L'interface est en roumain, anglais, français, italien, espagnol, portugais, allemand et hongrois ; les textes longs (atlas, glossaire, notes de score) n'existent qu'en roumain et anglais et sont affichés en anglais, avec une petite note, dans les autres langues. L'IA ne triche pas (elle ne voit que l'information publique et sa propre main ; une option d'apprentissage explicite « montrer les mains de l'IA » est la seule exception). Chaque approximation de règle est signalée ⚠ dans l'application et dans le tableau ci-dessus. Aucun accès réseau, aucun pistage ; CSP stricte. Licence : MIT (voir LICENSE).
 
 ## Nouvelles fonctions (v1.1.0)
 
