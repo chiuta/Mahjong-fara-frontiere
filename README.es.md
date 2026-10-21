@@ -14,7 +14,7 @@ Atlas de variantes de mahjong, solitario con repartos garantizados resolubles y 
 
 ## Qué es
 
-Una aplicación de un solo archivo (`index.html`, ~263 KB) de la serie «sin fronteras». Tiene cuatro pestañas: **Atlas** (fichas sobre 8 variantes), **Jugar** (los juegos), **Reglas y tablas** (las tablas de puntuación generadas directamente a partir del código del juego) y **Acerca de**. La interfaz está en rumano y, a elección, en inglés, francés, italiano, español, portugués, alemán y húngaro.
+Una aplicación de un solo archivo (`index.html`, ~263 KB) de la serie «sin fronteras». Tiene cuatro pestañas: **Atlas** (fichas sobre 8 variantes), **Jugar** (los juegos), **Reglas y tablas** (las tablas de puntuación generadas directamente a partir del código del juego) y **Acerca de**. La interfaz y todos los textos largos están en 8 idiomas (rumano, inglés, francés, italiano, español, portugués, alemán y húngaro).
 
 «Mahjong» es un término genérico. «Shanghai» es el nombre comercial de un juego de solitario de 1986; aquí el juego se llama «Mahjong solitario» (conocido comercialmente como «Shanghai»); ninguna marca registrada aparece en los títulos.
 
@@ -63,7 +63,7 @@ Nada sale del navegador: sin fetch/XHR, sin telemetría, sin fuentes ni scripts 
 
 - **No es un producto de competición completo.** Cada variante tiene aproximaciones ⚠ (la tabla de arriba y las fichas de la aplicación). Las reglas regionales difieren: en Hong Kong se implementó la tabla «half spicy» y el pago al descartar como opción; en riichi, «atamahane» (un único ganador al descartar); en Sichuan, sin intercambio de fichas.
 - **La IA es de nivel débil a medio.** No tiene modelos del adversario, no juega el riichi ofensivo/defensivo a nivel experto y no calcula probabilidades completas. Contra una base aleatoria (60 partidas por variante, con el asiento de la IA rotado): gana por mano ~52,8 % en riichi, ~29,1 % en Hong Kong (con las bases aleatorias casi todas las manos son empates, y el empate repite al dealer, por lo que las partidas son muy largas; la medida es débil) y ~71,3 % en Sichuan (paridad = 25 %). Entre IA las partidas son muy agresivas (~89 % de las manos de riichi terminan con una victoria).
-- Los textos largos (atlas, glosario, notas de puntuación) existen solo en **rumano e inglés**; en los otros 6 idiomas se muestra el texto en inglés, con una nota discreta («texto en inglés»). Los elementos de la interfaz están traducidos a los 8 idiomas (paridad verificada por script).
+- Todos los textos largos (atlas, glosario, notas de puntuación, tablas de yaku riichi/Hong Kong/Sichuan, nombres y notas de las 8 disposiciones del solitario) y la interfaz están traducidos a los 8 idiomas. Permanecen sin cambios: el campo «src» de las fichas del atlas (títulos de Wikipedia, citas) y los términos japoneses/chinos (yaku en japonés, riichi, dora, etc.). Las traducciones al francés, italiano, español, portugués, alemán y húngaro son automáticas; la terminología del mahjong (sobre todo hu, de) merece la revisión de un jugador nativo.
 - En Hong Kong, el empate mantiene al dealer (regla habitual): con un faan mínimo alto y adversarios pasivos la partida puede durar mucho; baja el faan mínimo o elige «una sola mano».
 - «Una sola mano» detiene el juego tras la primera mano (no tras la rotación del dealer).
 - Las traducciones al francés, italiano, español, portugués, alemán y húngaro se hicieron sin verificación por hablantes nativos.
@@ -95,7 +95,7 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
 ## Resumen
 
-«Mahjong sin fronteras» es una aplicación HTML de un solo archivo, sin conexión: un atlas de ocho variantes de mahjong, un mahjong solitario con ocho disposiciones dibujadas por el autor y repartos construidos a la inversa (garantizados resolubles), y un mahjong de cuatro asientos contra tres IA heurísticas en tres variantes jugables — riichi japonés, Hong Kong y Sichuan. MCR, taiwanés, americano y de tres jugadores (sanma) son solo del atlas. Las fichas se dibujan en SVG con una alternativa automática de letras latinas cuando faltan los glifos chinos. La interfaz está en rumano, inglés, francés, italiano, español, portugués, alemán y húngaro; los textos largos (atlas, glosario, notas de puntuación) existen solo en rumano e inglés y se muestran en inglés, con una pequeña nota, en los demás idiomas. La IA no hace trampa (solo ve la información pública y su propia mano; una opción explícita de aprendizaje «mostrar las manos de la IA» es la única excepción). Cada aproximación de reglas está marcada con ⚠ en la aplicación y en la tabla de arriba. Sin acceso a la red, sin rastreo; CSP estricta. Licencia: MIT (véase LICENSE).
+«Mahjong sin fronteras» es una aplicación HTML de un solo archivo, sin conexión: un atlas de ocho variantes de mahjong, un mahjong solitario con ocho disposiciones dibujadas por el autor y repartos construidos a la inversa (garantizados resolubles), y un mahjong de cuatro asientos contra tres IA heurísticas en tres variantes jugables — riichi japonés, Hong Kong y Sichuan. MCR, taiwanés, americano y de tres jugadores (sanma) son solo del atlas. Las fichas se dibujan en SVG con una alternativa automática de letras latinas cuando faltan los glifos chinos. La interfaz está en rumano, inglés, francés, italiano, español, portugués, alemán y húngaro; todos los textos largos (atlas, glosario, notas de puntuación) también están traducidos. La IA no hace trampa (solo ve la información pública y su propia mano; una opción explícita de aprendizaje «mostrar las manos de la IA» es la única excepción). Cada aproximación de reglas está marcada con ⚠ en la aplicación y en la tabla de arriba. Sin acceso a la red, sin rastreo; CSP estricta. Licencia: MIT (véase LICENSE).
 
 ## Funciones nuevas (v1.1.0)
 
@@ -106,6 +106,9 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Pruebas: `tests/fff-r8.test.mjs` (red bloqueada, dos contextos conectados mediante el diálogo real, axe 0 infracciones a 1280 y 360 px).
 
 ## Historial / Changelog
+
+### 2026-10-19 (v1.2.1)
+- Todos los textos largos (atlas de las 8 variantes, glosario, notas de puntuación, unas 90 entradas de yaku, las 8 disposiciones del solitario) están traducidos a fr, it, es, pt, de, hu; la nota «texto en inglés» ya no aparece. Traducciones automáticas, no verificadas por hablantes nativos.
 
 ### 14 de octubre de 2026 (v1.1.0)
 - Novedad: duelo de solitario en red (mismo tablero), lectura en voz alta de las fichas, kit común, pruebas.

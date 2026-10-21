@@ -14,7 +14,7 @@ Atlas de variantes de mahjong, solitaire avec donnes garanties résolubles et ma
 
 ## Ce que c'est
 
-Une application en un seul fichier (`index.html`, ~263 Ko) de la série « sans frontières ». Elle comporte quatre onglets : **Atlas** (fiches sur 8 variantes), **Jouer** (les jeux), **Règles et tableaux** (les tableaux de score générés directement à partir du code du jeu) et **À propos**. L'interface est en roumain et, au choix, en anglais, français, italien, espagnol, portugais, allemand et hongrois.
+Une application en un seul fichier (`index.html`, ~263 Ko) de la série « sans frontières ». Elle comporte quatre onglets : **Atlas** (fiches sur 8 variantes), **Jouer** (les jeux), **Règles et tableaux** (les tableaux de score générés directement à partir du code du jeu) et **À propos**. L'interface et tous les textes longs sont en 8 langues (roumain, anglais, français, italien, espagnol, portugais, allemand et hongrois).
 
 « Mahjong » est un terme générique. « Shanghai » est le nom commercial d'un jeu de solitaire de 1986 ; ici le jeu s'appelle « Mahjong solitaire » (connu commercialement sous le nom de « Shanghai ») ; aucune marque déposée n'apparaît dans les titres.
 
@@ -63,7 +63,7 @@ Rien ne quitte le navigateur : pas de fetch/XHR, pas de télémétrie, pas de po
 
 - **Ce n'est pas un produit de compétition complet.** Chaque variante comporte des approximations ⚠ (le tableau ci-dessus et les fiches de l'application). Les règles régionales diffèrent : à Hong Kong, on a implémenté le tableau « half spicy » et le paiement à la défausse comme option ; au riichi, « atamahane » (un seul gagnant à la défausse) ; au Sichuan, pas d'échange de tuiles.
 - **L'IA est de niveau faible à moyen.** Elle n'a pas de modèles d'adversaire, ne joue pas le riichi offensif/défensif au niveau expert et ne calcule pas de probabilités complètes. Contre une base aléatoire (60 parties par variante, place de l'IA tournante) : elle gagne par main ~52,8 % au riichi, ~29,1 % à Hong Kong (avec les bases aléatoires, presque toutes les mains sont nulles, et la partie nulle répète le donneur, donc les parties sont très longues ; la mesure est faible) et ~71,3 % au Sichuan (parité = 25 %). Entre IA, les parties sont très agressives (~89 % des mains de riichi se terminent par une victoire).
-- Les textes longs (atlas, glossaire, notes de score) n'existent qu'en **roumain et anglais** ; dans les 6 autres langues, le texte est affiché en anglais, avec une note discrète (« texte en anglais »). Les éléments d'interface sont traduits dans les 8 langues (parité vérifiée par script).
+- Tous les textes longs (atlas, glossaire, notes de score, tableaux de yaku riichi/Hong Kong/Sichuan, noms et notes des 8 dispositions du solitaire) et l'interface sont traduits dans les 8 langues. Restent tels quels : le champ « src » des fiches de l'atlas (titres Wikipédia, citations) et les termes japonais/chinois (yaku en japonais, riichi, dora, etc.). Les traductions en français, italien, espagnol, portugais, allemand et hongrois sont automatiques ; la terminologie du mahjong (surtout hu, de) mérite d'être relue par un joueur natif.
 - À Hong Kong, la partie nulle conserve le donneur (règle habituelle) : avec un faan minimum élevé et des adversaires passifs, la partie peut durer longtemps ; baissez le faan minimum ou choisissez « une seule main ».
 - « Une seule main » arrête le jeu après la première main (et non après la rotation du donneur).
 - Les traductions en français, italien, espagnol, portugais, allemand et hongrois ont été faites sans vérification par des locuteurs natifs.
@@ -94,7 +94,7 @@ MIT — voir le fichier `LICENSE`.
 Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
 ## Résumé
-« Mahjong sans frontières » est une application HTML en un seul fichier, hors ligne : un atlas de huit variantes de mahjong, un mahjong solitaire avec huit dispositions dessinées par l'auteur et des donnes construites à l'envers (garanties résolubles), et un mahjong à quatre places contre trois IA heuristiques en trois variantes jouables — riichi japonais, Hong Kong et Sichuan. MCR, taïwanais, américain et à trois joueurs (sanma) sont réservés à l'atlas. Les tuiles sont dessinées en SVG avec une alternative automatique en lettres latines lorsque les glyphes chinois manquent. L'interface est en roumain, anglais, français, italien, espagnol, portugais, allemand et hongrois ; les textes longs (atlas, glossaire, notes de score) n'existent qu'en roumain et anglais et sont affichés en anglais, avec une petite note, dans les autres langues. L'IA ne triche pas (elle ne voit que l'information publique et sa propre main ; une option d'apprentissage explicite « montrer les mains de l'IA » est la seule exception). Chaque approximation de règle est signalée ⚠ dans l'application et dans le tableau ci-dessus. Aucun accès réseau, aucun pistage ; CSP stricte. Licence : MIT (voir LICENSE).
+« Mahjong sans frontières » est une application HTML en un seul fichier, hors ligne : un atlas de huit variantes de mahjong, un mahjong solitaire avec huit dispositions dessinées par l'auteur et des donnes construites à l'envers (garanties résolubles), et un mahjong à quatre places contre trois IA heuristiques en trois variantes jouables — riichi japonais, Hong Kong et Sichuan. MCR, taïwanais, américain et à trois joueurs (sanma) sont réservés à l'atlas. Les tuiles sont dessinées en SVG avec une alternative automatique en lettres latines lorsque les glyphes chinois manquent. L'interface est en roumain, anglais, français, italien, espagnol, portugais, allemand et hongrois ; tous les textes longs (atlas, glossaire, notes de score) sont aussi traduits. L'IA ne triche pas (elle ne voit que l'information publique et sa propre main ; une option d'apprentissage explicite « montrer les mains de l'IA » est la seule exception). Chaque approximation de règle est signalée ⚠ dans l'application et dans le tableau ci-dessus. Aucun accès réseau, aucun pistage ; CSP stricte. Licence : MIT (voir LICENSE).
 
 ## Nouvelles fonctions (v1.1.0)
 
@@ -105,6 +105,9 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Tests : `tests/fff-r8.test.mjs` (réseau bloqué, deux contextes connectés par la vraie boîte de dialogue, axe 0 violation à 1280 et 360 px).
 
 ## Historique / Changelog
+
+### 2026-10-19 (v1.2.1)
+- Tous les textes longs (atlas des 8 variantes, glossaire, notes de score, environ 90 entrées de yaku, les 8 dispositions du solitaire) sont traduits en fr, it, es, pt, de, hu ; la note « texte en anglais » n'apparaît plus. Traductions automatiques, non vérifiées par des locuteurs natifs.
 
 ### 14 octobre 2026 (v1.1.0)
 - Nouveau : duel de solitaire en réseau (même plateau), lecture à voix haute des fiches, kit commun, tests.

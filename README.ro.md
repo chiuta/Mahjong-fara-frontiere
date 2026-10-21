@@ -14,7 +14,7 @@ Atlas de variante de mahjong, solitaire cu înțelegeri garantat rezolvabile și
 
 ## Ce este
 
-O aplicație dintr-un singur fișier (`index.html`, ~263 KB) din seria „fără frontiere”. Are patru file: **Atlas** (fișe despre 8 variante), **Joacă** (jocurile), **Reguli și tabele** (tabelele de scor generate chiar din codul jocului) și **Despre**. Interfața este în română și, la alegere, în engleză, franceză, italiană, spaniolă, portugheză, germană și maghiară.
+O aplicație dintr-un singur fișier (`index.html`, ~263 KB) din seria „fără frontiere”. Are patru file: **Atlas** (fișe despre 8 variante), **Joacă** (jocurile), **Reguli și tabele** (tabelele de scor generate chiar din codul jocului) și **Despre**. Interfața și toate textele lungi sunt în 8 limbi (română, engleză, franceză, italiană, spaniolă, portugheză, germană și maghiară).
 
 „Mahjong” este un termen generic. „Shanghai” este denumirea comercială a unui joc de solitaire din 1986; aici jocul se numește „Mahjong solitaire” (cunoscut comercial ca „Shanghai”); nicio marcă înregistrată nu apare în titluri.
 
@@ -63,7 +63,7 @@ Nimic nu pleacă din browser: fără fetch/XHR, fără telemetrie, fără fontur
 
 - **Nu este un produs complet de competiție.** Fiecare variantă are aproximări ⚠ (tabelul de mai sus și fișele din aplicație). Reguli regionale diferă: la Hong Kong s-a implementat tabelul „half spicy” și plata la aruncare ca opțiune; la riichi, „atamahane” (un singur câștigător la aruncare); la Sichuan, fără schimbul de plăci.
 - **AI-ul este slab-spre-mediu.** Nu are modele de adversar, nu joacă riichi-ul ofensiv/defensiv la nivel de expert și nu calculează probabilități complete. Contra unei baze aleatoare (60 de jocuri pe variantă, locul AI-ului rotit): câștigă pe mână ~52,8% la riichi, ~29,1% la Hong Kong (cu bazele aleatoare aproape toate mâinile sunt remize, iar remiza repetă dealerul, deci jocurile sunt foarte lungi; măsura e slabă) și ~71,3% la Sichuan (paritate = 25%). Între AI-uri partidele sunt foarte agresive (~89% din mâinile de riichi se termină cu câștig).
-- Textele lungi (atlas, glosar, notele de scor) există doar în **română și engleză**; în celelalte 6 limbi se afișează textul în engleză, cu o notă discretă („text în engleză”). Elementele de interfață sunt traduse în toate cele 8 limbi (paritate verificată de script).
+- Toate textele lungi (atlas, glosar, notele de scor, tabelele de yaku riichi/Hong Kong/Sichuan, numele și notele celor 8 aranjamente de solitaire) și interfața sunt traduse în toate cele 8 limbi. Rămân neschimbate: câmpul „src” al fișelor din atlas (titluri Wikipedia, citări) și termenii japonezi/chinezi (yaku în japoneză, riichi, dora etc.). Traducerile în franceză, italiană, spaniolă, portugheză, germană și maghiară sunt automate; terminologia de mahjong (mai ales hu, de) merită revizuită de un jucător nativ.
 - La Hong Kong, remiza păstrează dealerul (regulă obișnuită): cu un faan minim mare și adversari pasivi jocul poate dura mult; coboară faan-ul minim sau alege „o singură mână”.
 - „O singură mână” oprește jocul după prima mână (nu după rotația dealerului).
 - Traducerile din franceză, italiană, spaniolă, portugheză, germană și maghiară sunt făcute fără verificare de către vorbitori nativi.
@@ -95,7 +95,7 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
 ## Rezumat
 
-„Mahjong fără frontiere” este o aplicație HTML offline într-un singur fișier: un atlas de opt variante de mahjong, un solitaire mahjong cu opt aranjamente desenate propriu și mâini construite invers (garantat rezolvabile), și mahjong pe patru locuri împotriva a trei AI-uri euristice în trei variante jucabile — riichi japonez, Hong Kong și Sichuan. MCR, taiwanez, american și pentru trei jucători (sanma) sunt doar în atlas. Piesele sunt desenate în SVG, cu rezervă automată în litere latine când lipsesc glifele chinezești. Interfața este în română, engleză, franceză, italiană, spaniolă, portugheză și germană; textele lungi (atlas, glosar, note de punctaj) există doar în română și engleză și sunt afișate în engleză, cu o mică notă, în celelalte limbi. AI-ul nu trișează (vede doar informațiile publice și propria mână; o opțiune explicită de învățare „arată mâinile AI” este singura excepție). Fiecare aproximare de regulă este marcată ⚠ în aplicație și în tabelul de mai sus. Fără acces la rețea, fără urmărire; CSP strict. Licență: MIT (vezi LICENSE).
+„Mahjong fără frontiere” este o aplicație HTML offline într-un singur fișier: un atlas de opt variante de mahjong, un solitaire mahjong cu opt aranjamente desenate propriu și mâini construite invers (garantat rezolvabile), și mahjong pe patru locuri împotriva a trei AI-uri euristice în trei variante jucabile — riichi japonez, Hong Kong și Sichuan. MCR, taiwanez, american și pentru trei jucători (sanma) sunt doar în atlas. Piesele sunt desenate în SVG, cu rezervă automată în litere latine când lipsesc glifele chinezești. Interfața este în română, engleză, franceză, italiană, spaniolă, portugheză și germană; și toate textele lungi (atlas, glosar, notele de scor) sunt traduse. AI-ul nu trișează (vede doar informațiile publice și propria mână; o opțiune explicită de învățare „arată mâinile AI” este singura excepție). Fiecare aproximare de regulă este marcată ⚠ în aplicație și în tabelul de mai sus. Fără acces la rețea, fără urmărire; CSP strict. Licență: MIT (vezi LICENSE).
 
 ## Funcții noi (v1.1.0)
 
@@ -106,6 +106,9 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Teste: `tests/fff-r8.test.mjs` (rețea blocată, două contexte conectate prin dialogul real, axe 0 violări la 1280 și 360 px).
 
 ## Istoric / Changelog
+
+### 2026-10-19 (v1.2.1)
+- Toate textele lungi (atlasul celor 8 variante, glosarul, notele de scor, circa 90 de intrări yaku, cele 8 aranjamente de solitaire) sunt traduse în fr, it, es, pt, de, hu; nota „text în engleză” nu mai apare. Traduceri automate, neverificate de vorbitori nativi.
 
 ### 14 octombrie 2026 (v1.1.0)
 - Nou: duel de solitaire pe rețea (aceeași tablă), citirea fișelor cu voce, kit comun, teste.

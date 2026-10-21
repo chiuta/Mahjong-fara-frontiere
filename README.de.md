@@ -14,7 +14,7 @@ Atlas der Mahjong-Varianten, Solitaire mit garantiert lösbaren Blättern und Ma
 
 ## Was es ist
 
-Eine Ein-Datei-App (`index.html`, ~263 KB) aus der Reihe „ohne Grenzen“. Sie hat vier Reiter: **Atlas** (Karten zu 8 Varianten), **Spielen** (die Spiele), **Regeln und Tabellen** (die Punktetabellen, direkt aus dem Code des Spiels erzeugt) und **Über**. Die Oberfläche ist auf Rumänisch und wahlweise auf Englisch, Französisch, Italienisch, Spanisch, Portugiesisch, Deutsch und Ungarisch.
+Eine Ein-Datei-App (`index.html`, ~263 KB) aus der Reihe „ohne Grenzen“. Sie hat vier Reiter: **Atlas** (Karten zu 8 Varianten), **Spielen** (die Spiele), **Regeln und Tabellen** (die Punktetabellen, direkt aus dem Code des Spiels erzeugt) und **Über**. Die Oberfläche und alle langen Texte gibt es in 8 Sprachen (Rumänisch, Englisch, Französisch, Italienisch, Spanisch, Portugiesisch, Deutsch und Ungarisch).
 
 „Mahjong“ ist ein Gattungsbegriff. „Shanghai“ ist die Handelsbezeichnung eines Solitaire-Spiels von 1986; hier heißt das Spiel „Mahjong-Solitaire“ (kommerziell als „Shanghai“ bekannt); in den Titeln erscheint keine eingetragene Marke.
 
@@ -63,7 +63,7 @@ Nichts verlässt den Browser: kein fetch/XHR, keine Telemetrie, keine externen S
 
 - **Es ist kein vollständiges Wettkampfprodukt.** Jede Variante hat ⚠-Annäherungen (die Tabelle oben und die Karten in der App). Regionale Regeln unterscheiden sich: In Hongkong wurden die „half spicy“-Tabelle und die Zahlung beim Abwurf als Option umgesetzt; beim Riichi „Atamahane“ (ein einziger Gewinner beim Abwurf); in Sichuan kein Steintausch.
 - **Die KI ist schwach bis mittel.** Sie hat keine Gegnermodelle, spielt Riichi nicht auf Expertenniveau offensiv/defensiv und berechnet keine vollständigen Wahrscheinlichkeiten. Gegen eine Zufallsbasis (60 Spiele pro Variante, Sitzplatz der KI rotiert): Sie gewinnt pro Hand ~52,8 % beim Riichi, ~29,1 % in Hongkong (bei Zufallsbasen sind fast alle Hände Unentschieden, und ein Unentschieden wiederholt den Geber, daher sind die Spiele sehr lang; das Maß ist schwach) und ~71,3 % in Sichuan (Parität = 25 %). Zwischen KIs sind die Partien sehr aggressiv (~89 % der Riichi-Hände enden mit einem Gewinn).
-- Die langen Texte (Atlas, Glossar, Wertungshinweise) gibt es nur auf **Rumänisch und Englisch**; in den anderen 6 Sprachen wird der Text auf Englisch angezeigt, mit einem dezenten Hinweis („Text auf Englisch“). Die Oberflächenelemente sind in alle 8 Sprachen übersetzt (Parität per Skript geprüft).
+- Alle langen Texte (Atlas, Glossar, Wertungshinweise, die Yaku-Tabellen für Riichi/Hongkong/Sichuan, Namen und Hinweise der 8 Solitaire-Layouts) und die Oberfläche sind in alle 8 Sprachen übersetzt. Unverändert bleiben: das Feld „src“ der Atlaskarten (Wikipedia-Titel, Zitate) und die japanischen/chinesischen Begriffe (Yaku auf Japanisch, Riichi, Dora usw.). Die Übersetzungen ins Französische, Italienische, Spanische, Portugiesische, Deutsche und Ungarische sind automatisch; die Mahjong-Terminologie (besonders hu, de) sollte von einem muttersprachlichen Spieler geprüft werden.
 - In Hongkong behält ein Unentschieden den Geber (übliche Regel): Bei hohem Mindest-Faan und passiven Gegnern kann das Spiel lange dauern; senke das Mindest-Faan oder wähle „eine einzige Hand“.
 - „Eine einzige Hand“ beendet das Spiel nach der ersten Hand (nicht nach dem Wechsel des Gebers).
 - Die Übersetzungen ins Französische, Italienische, Spanische, Portugiesische, Deutsche und Ungarische wurden ohne Prüfung durch Muttersprachler erstellt.
@@ -94,7 +94,7 @@ MIT — siehe die Datei `LICENSE`.
 Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
 ## Zusammenfassung
-„Mahjong ohne Grenzen“ ist eine Ein-Datei-HTML-App, offline: ein Atlas von acht Mahjong-Varianten, ein Mahjong-Solitaire mit acht selbst gezeichneten Layouts und rückwärts konstruierten (garantiert lösbaren) Blättern sowie Mahjong zu viert gegen drei heuristische KIs in drei spielbaren Varianten — japanisches Riichi, Hongkong und Sichuan. MCR, taiwanisches, amerikanisches und Drei-Personen-Mahjong (Sanma) gibt es nur im Atlas. Die Steine werden als SVG gezeichnet, mit automatischem Ersatz durch lateinische Buchstaben, wenn chinesische Glyphen fehlen. Die Oberfläche ist auf Rumänisch, Englisch, Französisch, Italienisch, Spanisch, Portugiesisch, Deutsch und Ungarisch; lange Texte (Atlas, Glossar, Wertungshinweise) gibt es nur auf Rumänisch und Englisch und werden in den anderen Sprachen auf Englisch mit einem kleinen Hinweis angezeigt. Die KI schummelt nicht (sie sieht nur öffentliche Informationen und ihre eigene Hand; eine ausdrückliche Lernoption „KI-Hände zeigen“ ist die einzige Ausnahme). Jede Regelannäherung ist in der App und in der Tabelle oben mit ⚠ gekennzeichnet. Kein Netzwerkzugriff, kein Tracking; strenge CSP. Lizenz: MIT (siehe LICENSE).
+„Mahjong ohne Grenzen“ ist eine Ein-Datei-HTML-App, offline: ein Atlas von acht Mahjong-Varianten, ein Mahjong-Solitaire mit acht selbst gezeichneten Layouts und rückwärts konstruierten (garantiert lösbaren) Blättern sowie Mahjong zu viert gegen drei heuristische KIs in drei spielbaren Varianten — japanisches Riichi, Hongkong und Sichuan.; auch alle langen Texte (Atlas, Glossar, Wertungshinweise) sind übersetzt. Die Steine werden als SVG gezeichnet, mit automatischem Ersatz durch lateinische Buchstaben, wenn chinesische Glyphen fehlen. Die Oberfläche ist auf Rumänisch, Englisch, Französisch, Italienisch, Spanisch, Portugiesisch, Deutsch und Ungarisch; lange Texte (Atlas, Glossar, Wertungshinweise) gibt es nur auf Rumänisch und Englisch und werden in den anderen Sprachen auf Englisch mit einem kleinen Hinweis angezeigt. Die KI schummelt nicht (sie sieht nur öffentliche Informationen und ihre eigene Hand; eine ausdrückliche Lernoption „KI-Hände zeigen“ ist die einzige Ausnahme). Jede Regelannäherung ist in der App und in der Tabelle oben mit ⚠ gekennzeichnet. Kein Netzwerkzugriff, kein Tracking; strenge CSP. Lizenz: MIT (siehe LICENSE).
 
 ## Neue Funktionen (v1.1.0)
 
@@ -105,6 +105,9 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Tests: `tests/fff-r8.test.mjs` (Netzwerk gesperrt, zwei Kontexte über den echten Dialog verbunden, axe 0 Verstöße bei 1280 und 360 px).
 
 ## Verlauf / Changelog
+
+### 2026-10-19 (v1.2.1)
+- Alle langen Texte (Atlas der 8 Varianten, Glossar, Wertungshinweise, rund 90 Yaku-Einträge, die 8 Solitaire-Layouts) sind nach fr, it, es, pt, de, hu übersetzt; der Hinweis „Text auf Englisch“ erscheint nicht mehr. Automatische Übersetzungen, nicht von Muttersprachlern geprüft.
 
 ### 14. Oktober 2026 (v1.1.0)
 - Neu: Solitaire-Duell im Netzwerk (gleiches Brett), Vorlesen der Karten, gemeinsames Kit, Tests.

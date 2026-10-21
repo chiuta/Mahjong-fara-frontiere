@@ -14,7 +14,7 @@ Atlas de variantes de mahjong, paciência com distribuições garantidamente res
 
 ## O que é
 
-Uma aplicação de ficheiro único (`index.html`, ~263 KB) da série «sem fronteiras». Tem quatro separadores: **Atlas** (fichas sobre 8 variantes), **Jogar** (os jogos), **Regras e tabelas** (as tabelas de pontuação geradas diretamente a partir do código do jogo) e **Sobre**. A interface está em romeno e, à escolha, em inglês, francês, italiano, espanhol, português, alemão e húngaro.
+Uma aplicação de ficheiro único (`index.html`, ~263 KB) da série «sem fronteiras». Tem quatro separadores: **Atlas** (fichas sobre 8 variantes), **Jogar** (os jogos), **Regras e tabelas** (as tabelas de pontuação geradas diretamente a partir do código do jogo) e **Sobre**. A interface e todos os textos longos estão em 8 idiomas (romeno, inglês, francês, italiano, espanhol, português, alemão e húngaro).
 
 «Mahjong» é um termo genérico. «Shanghai» é o nome comercial de um jogo de paciência de 1986; aqui o jogo chama-se «Mahjong paciência» (conhecido comercialmente como «Shanghai»); nenhuma marca registada aparece nos títulos.
 
@@ -63,7 +63,7 @@ Nada sai do navegador: sem fetch/XHR, sem telemetria, sem tipos de letra nem scr
 
 - **Não é um produto de competição completo.** Cada variante tem aproximações ⚠ (a tabela acima e as fichas da aplicação). As regras regionais diferem: em Hong Kong implementou-se a tabela «half spicy» e o pagamento no descarte como opção; no riichi, «atamahane» (um único vencedor no descarte); em Sichuan, sem troca de peças.
 - **A IA é de nível fraco a médio.** Não tem modelos do adversário, não joga o riichi ofensivo/defensivo ao nível de perito e não calcula probabilidades completas. Contra uma base aleatória (60 partidas por variante, com o lugar da IA rodado): ganha por mão ~52,8 % no riichi, ~29,1 % em Hong Kong (com as bases aleatórias quase todas as mãos são empates, e o empate repete o dealer, pelo que as partidas são muito longas; a medida é fraca) e ~71,3 % em Sichuan (paridade = 25 %). Entre IA as partidas são muito agressivas (~89 % das mãos de riichi terminam com uma vitória).
-- Os textos longos (atlas, glossário, notas de pontuação) existem apenas em **romeno e inglês**; nas outras 6 línguas o texto é apresentado em inglês, com uma nota discreta («texto em inglês»). Os elementos da interface estão traduzidos nas 8 línguas (paridade verificada por script).
+- Todos os textos longos (atlas, glossário, notas de pontuação, tabelas de yaku riichi/Hong Kong/Sichuan, nomes e notas das 8 disposições do solitário) e a interface estão traduzidos para os 8 idiomas. Permanecem inalterados: o campo «src» das fichas do atlas (títulos da Wikipédia, citações) e os termos japoneses/chineses (yaku em japonês, riichi, dora, etc.). As traduções para francês, italiano, espanhol, português, alemão e húngaro são automáticas; a terminologia do mahjong (sobretudo hu, de) merece revisão por um jogador nativo.
 - Em Hong Kong, o empate mantém o dealer (regra habitual): com um faan mínimo alto e adversários passivos o jogo pode demorar muito; baixe o faan mínimo ou escolha «uma só mão».
 - «Uma só mão» pára o jogo após a primeira mão (não após a rotação do dealer).
 - As traduções para francês, italiano, espanhol, português, alemão e húngaro foram feitas sem verificação por falantes nativos.
@@ -94,7 +94,7 @@ MIT — veja o ficheiro `LICENSE`.
 Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
 ## Resumo
-«Mahjong sem fronteiras» é uma aplicação HTML de ficheiro único, offline: um atlas de oito variantes de mahjong, uma paciência de mahjong com oito disposições desenhadas pelo autor e distribuições construídas ao contrário (garantidamente resolúveis), e um mahjong de quatro lugares contra três IA heurísticas em três variantes jogáveis — riichi japonês, Hong Kong e Sichuan. MCR, taiwanês, americano e de três jogadores (sanma) são apenas do atlas. As peças são desenhadas em SVG com uma alternativa automática de letras latinas quando faltam os glifos chineses. A interface está em romeno, inglês, francês, italiano, espanhol, português, alemão e húngaro; os textos longos (atlas, glossário, notas de pontuação) existem apenas em romeno e inglês e são apresentados em inglês, com uma pequena nota, nas outras línguas. A IA não faz batota (só vê a informação pública e a sua própria mão; uma opção explícita de aprendizagem «mostrar as mãos da IA» é a única exceção). Cada aproximação de regras está assinalada com ⚠ na aplicação e na tabela acima. Sem acesso à rede, sem rastreamento; CSP estrita. Licença: MIT (ver LICENSE).
+«Mahjong sem fronteiras» é uma aplicação HTML de ficheiro único, offline: um atlas de oito variantes de mahjong, uma paciência de mahjong com oito disposições desenhadas pelo autor e distribuições construídas ao contrário (garantidamente resolúveis), e um mahjong de quatro lugares contra três IA heurísticas em três variantes jogáveis — riichi japonês, Hong Kong e Sichuan. MCR, taiwanês, americano e de três jogadores (sanma) são apenas do atlas. As peças são desenhadas em SVG com uma alternativa automática de letras latinas quando faltam os glifos chineses. A interface está em romeno, inglês, francês, italiano, espanhol, português, alemão e húngaro; todos os textos longos (atlas, glossário, notas de pontuação) também estão traduzidos. A IA não faz batota (só vê a informação pública e a sua própria mão; uma opção explícita de aprendizagem «mostrar as mãos da IA» é a única exceção). Cada aproximação de regras está assinalada com ⚠ na aplicação e na tabela acima. Sem acesso à rede, sem rastreamento; CSP estrita. Licença: MIT (ver LICENSE).
 
 ## Novas funcionalidades (v1.1.0)
 
@@ -105,6 +105,9 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Testes: `tests/fff-r8.test.mjs` (rede bloqueada, dois contextos ligados através da caixa de diálogo real, axe 0 violações a 1280 e 360 px).
 
 ## Histórico / Changelog
+
+### 2026-10-19 (v1.2.1)
+- Todos os textos longos (atlas das 8 variantes, glossário, notas de pontuação, cerca de 90 entradas de yaku, as 8 disposições do solitário) estão traduzidos para fr, it, es, pt, de, hu; a nota «texto em inglês» já não aparece. Traduções automáticas, não verificadas por falantes nativos.
 
 ### 14 de outubro de 2026 (v1.1.0)
 - Novidade: duelo de paciência em rede (mesmo tabuleiro), leitura em voz alta das fichas, kit comum, testes.

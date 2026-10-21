@@ -14,7 +14,7 @@ An atlas of mahjong variants, mahjong solitaire with guaranteed-solvable deals, 
 
 ## What it is
 
-A single-file app (`index.html`, ~263 KB) from the "without borders" series. It has four tabs: **Atlas** (cards on 8 variants), **Play** (the games), **Rules and tables** (the scoring tables generated straight from the game's code) and **About**. The interface is in Romanian and, optionally, in English, French, Italian, Spanish, Portuguese, German and Hungarian.
+A single-file app (`index.html`, ~263 KB) from the "without borders" series. It has four tabs: **Atlas** (cards on 8 variants), **Play** (the games), **Rules and tables** (the scoring tables generated straight from the game's code) and **About**. The interface and all the long texts are in 8 languages (Romanian, English, French, Italian, Spanish, Portuguese, German and Hungarian).
 
 "Mahjong" is a generic term. "Shanghai" is the trade name of a 1986 solitaire game; here the game is called "Mahjong solitaire" (commercially known as "Shanghai"); no registered trademark appears in the titles.
 
@@ -63,7 +63,7 @@ Nothing leaves the browser: no fetch/XHR, no telemetry, no external fonts or scr
 
 - **It is not a complete competition product.** Each variant has ⚠ approximations (the table above and the cards in the app). Regional rules differ: for Hong Kong the "half spicy" table and payment on discard as an option were implemented; for riichi, "atamahane" (a single winner on discard); for Sichuan, no tile exchange.
 - **The AI is weak-to-medium.** It has no opponent models, does not play riichi offensively/defensively at expert level and does not compute full probabilities. Against a random baseline (60 games per variant, the AI's seat rotated): it wins ~52.8% of hands at riichi, ~29.1% at Hong Kong (with random baselines almost all hands are draws, and a draw repeats the dealer, so the games are very long; the measure is weak) and ~71.3% at Sichuan (parity = 25%). Between AIs the games are very aggressive (~89% of riichi hands end with a win).
-- The long texts (atlas, glossary, scoring notes) exist only in **Romanian and English**; in the other 6 languages the text is displayed in English, with a discreet note ("text in English"). The interface elements are translated into all 8 languages (parity checked by script).
+- All the long texts (atlas, glossary, scoring notes, the riichi/Hong Kong/Sichuan yaku tables, the names and notes of the 8 solitaire layouts) and the interface are translated into all 8 languages. Left as they are: the "src" field of the atlas sheets (Wikipedia titles, citations) and the Japanese/Chinese terms (yaku in Japanese, riichi, dora etc.). The French, Italian, Spanish, Portuguese, German and Hungarian translations are automatic; the mahjong terminology (especially hu, de) deserves a review by a native player.
 - At Hong Kong, a draw keeps the dealer (a usual rule): with a high minimum faan and passive opponents the game can last a long time; lower the minimum faan or choose "one hand".
 - "One hand" stops the game after the first hand (not after the dealer rotation).
 - The French, Italian, Spanish, Portuguese, German and Hungarian translations were made without verification by native speakers.
@@ -95,7 +95,7 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 
 ## English summary
 
-“Mahjong without borders” is a single-file, offline HTML app: an atlas of eight mahjong variants, a mahjong solitaire with eight self-drawn layouts and reverse-constructed (guaranteed solvable) deals, and four-seat mahjong against three heuristic AIs in three playable variants — Japanese riichi, Hong Kong and Sichuan. MCR, Taiwanese, American and three-player (sanma) are atlas-only. Tiles are drawn as SVG with an automatic Latin-letter fallback when Chinese glyphs are missing. The UI is in Romanian, English, French, Italian, Spanish, Portuguese, German and Hungarian; long texts (atlas, glossary, scoring notes) exist only in Romanian and English and are shown in English, with a small note, in the other languages. The AI does not cheat (it sees only public information and its own hand; an explicit “show AI hands” learning option is the only exception). Every rule approximation is marked ⚠ in the app and in the table above. No network access, no tracking; strict CSP. License: MIT (see LICENSE).
+“Mahjong without borders” is a single-file, offline HTML app: an atlas of eight mahjong variants, a mahjong solitaire with eight self-drawn layouts and reverse-constructed (guaranteed solvable) deals, and four-seat mahjong against three heuristic AIs in three playable variants — Japanese riichi, Hong Kong and Sichuan. MCR, Taiwanese, American and three-player (sanma) are atlas-only. Tiles are drawn as SVG with an automatic Latin-letter fallback when Chinese glyphs are missing. The UI is in Romanian, English, French, Italian, Spanish, Portuguese, German and Hungarian; all the long texts (atlas, glossary, scoring notes) are translated too. The AI does not cheat (it sees only public information and its own hand; an explicit “show AI hands” learning option is the only exception). Every rule approximation is marked ⚠ in the app and in the table above. No network access, no tracking; strict CSP. License: MIT (see LICENSE).
 
 ## New features (v1.1.0)
 
@@ -106,6 +106,9 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Tests: `tests/fff-r8.test.mjs` (network blocked, two contexts connected through the real dialog, axe 0 violations at 1280 and 360 px).
 
 ## History / Changelog
+
+### 2026-10-19 (v1.2.1)
+- All the long texts (atlas of 8 variants, glossary, scoring notes, about 90 yaku entries, the 8 solitaire layouts) are translated into fr, it, es, pt, de, hu; the "text in English" note no longer appears. Automatic translations, not verified by native speakers.
 
 ### 14 October 2026 (v1.1.0)
 - New: network solitaire duel (same board), voice reading of the cards, shared kit, tests.
