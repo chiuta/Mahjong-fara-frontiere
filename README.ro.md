@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.2.4 · **Ultima actualizare:** 2026-10-22
+**Versiune:** 1.2.5 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -106,6 +106,10 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Teste: `tests/fff-r8.test.mjs` (rețea blocată, două contexte conectate prin dialogul real, axe 0 violări la 1280 și 360 px).
 
 ## Istoric / Changelog
+
+### 1.2.5 — 2026-10-22
+
+fff-kit 1.1.4: ținte tactile și text minim.
 
 ### 1.2.4 — 2026-10-22
 

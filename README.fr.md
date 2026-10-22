@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.2.4 · **Dernière mise à jour :** 2026-10-22
+**Version :** 1.2.5 · **Dernière mise à jour :** 2026-10-22
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -105,6 +105,10 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Tests : `tests/fff-r8.test.mjs` (réseau bloqué, deux contextes connectés par la vraie boîte de dialogue, axe 0 violation à 1280 et 360 px).
 
 ## Historique / Changelog
+
+### 1.2.5 — 2026-10-22
+
+fff-kit 1.1.4 : cibles tactiles et taille de texte minimale.
 
 ### 1.2.4 — 2026-10-22
 
