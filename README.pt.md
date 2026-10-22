@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.2.3 · **Última atualização:** 2026-10-22
+**Versão:** 1.2.4 · **Última atualização:** 2026-10-22
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -105,6 +105,10 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Testes: `tests/fff-r8.test.mjs` (rede bloqueada, dois contextos ligados através da caixa de diálogo real, axe 0 violações a 1280 e 360 px).
 
 ## Histórico / Changelog
+
+### 1.2.4 — 2026-10-22
+
+fff-kit 1.1.2: PBKDF2 com 600.000 iterações, proteção anti-clickjacking.
 
 ### 1.2.3 — 2026-10-22
 
