@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.6 · **Utolsó frissítés:** 2026-10-23
+**Verzió:** 1.2.7 · **Utolsó frissítés:** 2026-10-23
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -105,6 +105,11 @@ A „Mahdzsong határok nélkül” egyetlen fájlba zárt, offline HTML-alkalma
 - Tesztek: `tests/fff-r8.test.mjs` (blokkolt hálózat, két, a valódi párbeszédpanelen át összekapcsolt környezet, axe 0 hiba 1280 és 360 px szélességnél).
 
 ## Előzmények / Changelog
+
+### 1.2.7 — 2026-10-23
+
+- Tárolás: a kulcsok mostantól az alkalmazás előtagját viselik (`mahjong.*`); a meglévő adatok indításkor automatikusan átkerülnek a régi kulcsokból (`mjfb.*`), a régebbi `.fff.json` mentések pedig továbbra is importálhatók (fff-kit 1.2.0).
+- Párbeszédablakok: a natív `alert`/`confirm`/`prompt` ablakokat akadálymentes, lefordított `FFF.dialog` ablakok váltották fel (billentyűzet, fókuszcsapda, Esc), változatlan viselkedéssel (fff-kit 1.2.0).
 
 ### 1.2.5 — 2026-10-22
 

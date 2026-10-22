@@ -126,12 +126,12 @@ const playPairs = (p, from, to) => p.evaluate(([a, b]) => { const sol = SOL.S.so
   const st = await page.evaluate(() => ({duel: SOL.duel, hint: document.getElementById('sol-hint').disabled, again: document.getElementById('sol-again').disabled}));
   ok(st.duel === null && !st.hint && !st.again, 'solitaire singur: butoanele rămân active, fără duel');
   await page.evaluate(() => { const s = SOL.S.solution; solPick(s[0][0]); solPick(s[0][1]); });
-  const saved = await page.evaluate(() => localStorage.getItem('mjfb.solsave'));
+  const saved = await page.evaluate(() => localStorage.getItem('mahjong.solsave'));
   ok(saved && JSON.parse(saved).seed === await page.evaluate(() => SOL.seed), 'partida singură se salvează automat');
   await page.locator('#sol-hint').click(); await page.waitForTimeout(200);
   ok(await page.locator('#sol-svg .st.hint').count() >= 2, 'sugestia merge în solitaire singur');
   const bundle = await page.evaluate(() => FFF.bundle.build());
-  ok(bundle && bundle.app === 'mahjong' && bundle.data['mjfb.solsave'] && bundle.data['mjfb.solstats'], 'exportul .fff.json conține salvarea și statisticile', bundle && Object.keys(bundle.data));
+  ok(bundle && bundle.app === 'mahjong' && bundle.data['mahjong.solsave'] && bundle.data['mahjong.solstats'], 'exportul .fff.json conține salvarea și statisticile', bundle && Object.keys(bundle.data));
   await ctx.close();
 }
 ok(errs.length === 0, 'fără pageerror/CSP în tot setul', errs.slice(0, 5)); ok(net.length === 0, '0 cereri de rețea în tot setul', net.slice(0, 3));

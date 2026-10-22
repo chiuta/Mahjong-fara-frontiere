@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.2.6 · **Dernière mise à jour :** 2026-10-23
+**Version :** 1.2.7 · **Dernière mise à jour :** 2026-10-23
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -105,6 +105,11 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Tests : `tests/fff-r8.test.mjs` (réseau bloqué, deux contextes connectés par la vraie boîte de dialogue, axe 0 violation à 1280 et 360 px).
 
 ## Historique / Changelog
+
+### 1.2.7 — 2026-10-23
+
+- Stockage : les clés portent désormais le préfixe de l'application (`mahjong.*`) ; les données existantes sont migrées automatiquement au démarrage depuis les anciennes clés (`mjfb.*`), et les anciennes sauvegardes `.fff.json` s'importent toujours (fff-kit 1.2.0).
+- Dialogues : les boîtes natives `alert`/`confirm`/`prompt` ont été remplacées par des dialogues `FFF.dialog` accessibles et traduits (clavier, piège de focus, Échap), au comportement identique (fff-kit 1.2.0).
 
 ### 1.2.5 — 2026-10-22
 
