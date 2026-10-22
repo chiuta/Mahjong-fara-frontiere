@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.2.2 · **Zuletzt aktualisiert:** 2026-10-22
+**Version:** 1.2.3 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -105,6 +105,10 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Tests: `tests/fff-r8.test.mjs` (Netzwerk gesperrt, zwei Kontexte über den echten Dialog verbunden, axe 0 Verstöße bei 1280 und 360 px).
 
 ## Verlauf / Changelog
+
+### 1.2.3 — 2026-10-22
+
+das Löschen der Statistik fragt im Inline-Dialog des Kits (in 8 Sprachen übersetzt) statt im blockierenden `window.confirm()` nach; sichtbarer Tastaturfokus; das Versionsetikett hat ein ausreichend großes Touch-Ziel; Test `tests/r9-confirm.test.mjs`. Das technische Etikett listet jetzt alle 8 Oberflächensprachen.
 
 ### 1.2.2 — 2026-10-22
 - Glossar: Die Begriffe „Mauer / Tote Mauer“ und „Fehlende Farbe“ sind in alle Sprachen übersetzt.

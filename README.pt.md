@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.2.2 · **Última atualização:** 2026-10-22
+**Versão:** 1.2.3 · **Última atualização:** 2026-10-22
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -105,6 +105,10 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Testes: `tests/fff-r8.test.mjs` (rede bloqueada, dois contextos ligados através da caixa de diálogo real, axe 0 violações a 1280 e 360 px).
 
 ## Histórico / Changelog
+
+### 1.2.3 — 2026-10-22
+
+apagar as estatísticas pede confirmação na caixa de diálogo integrada do kit (traduzida em 8 idiomas) em vez do `window.confirm()` bloqueante; foco de teclado visível; a etiqueta de versão tem uma área tátil adequada; teste `tests/r9-confirm.test.mjs`. A etiqueta técnica lista agora os 8 idiomas da interface.
 
 ### 1.2.2 — 2026-10-22
 - Glossário: os termos «Muro / Muro morto» e «Naipe em falta» estão traduzidos em todos os idiomas.

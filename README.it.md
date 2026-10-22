@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.2.2 · **Ultimo aggiornamento:** 2026-10-22
+**Versione:** 1.2.3 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -105,6 +105,10 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Test: `tests/fff-r8.test.mjs` (rete bloccata, due contesti connessi tramite la finestra reale, axe 0 violazioni a 1280 e 360 px).
 
 ## Cronologia / Changelog
+
+### 1.2.3 — 2026-10-22
+
+la cancellazione delle statistiche chiede conferma nella finestra in linea del kit (tradotta in 8 lingue) invece del `window.confirm()` bloccante; focus da tastiera visibile; l’etichetta di versione ha un’area tattile adeguata; test `tests/r9-confirm.test.mjs`. L’etichetta tecnica elenca ora tutte e 8 le lingue dell’interfaccia.
 
 ### 1.2.2 — 2026-10-22
 - Glossario: i termini «Muro / Muro morto» e «Seme mancante» sono tradotti in tutte le lingue.

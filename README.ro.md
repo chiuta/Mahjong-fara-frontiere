@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.2.2 · **Ultima actualizare:** 2026-10-22
+**Versiune:** 1.2.3 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -106,6 +106,10 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Teste: `tests/fff-r8.test.mjs` (rețea blocată, două contexte conectate prin dialogul real, axe 0 violări la 1280 și 360 px).
 
 ## Istoric / Changelog
+
+### 1.2.3 — 2026-10-22
+
+ștergerea statisticilor cere confirmarea în dialogul inline al kitului (tradus în 8 limbi), nu prin `window.confirm()` blocant; focus de tastatură vizibil; eticheta de versiune are ținta tactilă potrivită; test `tests/r9-confirm.test.mjs`. Eticheta tehnică listează acum toate cele 8 limbi ale interfeței.
 
 ### 1.2.2 — 2026-10-22
 - Glosar: termenii „Zid / Zid mort” și „Culoare lipsă” sunt traduși în toate limbile.

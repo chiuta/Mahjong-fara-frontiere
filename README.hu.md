@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.2 · **Utolsó frissítés:** 2026-10-22
+**Verzió:** 1.2.3 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -105,6 +105,10 @@ A „Mahdzsong határok nélkül” egyetlen fájlba zárt, offline HTML-alkalma
 - Tesztek: `tests/fff-r8.test.mjs` (blokkolt hálózat, két, a valódi párbeszédpanelen át összekapcsolt környezet, axe 0 hiba 1280 és 360 px szélességnél).
 
 ## Előzmények / Changelog
+
+### 1.2.3 — 2026-10-22
+
+a statisztikák törlése a kit soron belüli párbeszédablakában (8 nyelvre lefordítva) kér megerősítést a blokkoló `window.confirm()` helyett; látható billentyűzetfókusz; a verziócímke megfelelő érintési felületű; teszt: `tests/r9-confirm.test.mjs`. A műszaki címke most felsorolja mind a 8 felületi nyelvet.
 
 ### 1.2.2 — 2026-10-22
 - Szójegyzék: a „Fal / Holt fal” és a „Hiányzó szín” kifejezések minden nyelven le vannak fordítva.
