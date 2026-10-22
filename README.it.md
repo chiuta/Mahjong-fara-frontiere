@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.2.1 · **Ultimo aggiornamento:** 2026-10-19
+**Versione:** 1.2.2 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -105,6 +105,9 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Test: `tests/fff-r8.test.mjs` (rete bloccata, due contesti connessi tramite la finestra reale, axe 0 violazioni a 1280 e 360 px).
 
 ## Cronologia / Changelog
+
+### 1.2.2 — 2026-10-22
+- Glossario: i termini «Muro / Muro morto» e «Seme mancante» sono tradotti in tutte le lingue.
 
 ### 2026-10-19 (v1.2.1)
 - Tutti i testi lunghi (atlante delle 8 varianti, glossario, note sul punteggio, circa 90 voci di yaku, le 8 disposizioni del solitario) sono tradotti in fr, it, es, pt, de, hu; la nota «testo in inglese» non compare più. Traduzioni automatiche, non verificate da madrelingua.

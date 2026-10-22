@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.1 · **Utolsó frissítés:** 2026-10-19
+**Verzió:** 1.2.2 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -105,6 +105,9 @@ A „Mahdzsong határok nélkül” egyetlen fájlba zárt, offline HTML-alkalma
 - Tesztek: `tests/fff-r8.test.mjs` (blokkolt hálózat, két, a valódi párbeszédpanelen át összekapcsolt környezet, axe 0 hiba 1280 és 360 px szélességnél).
 
 ## Előzmények / Changelog
+
+### 1.2.2 — 2026-10-22
+- Szójegyzék: a „Fal / Holt fal” és a „Hiányzó szín” kifejezések minden nyelven le vannak fordítva.
 
 ### 2026-10-19 (v1.2.1)
 - Az összes hosszú szöveg (a 8 változat atlasza, szószedet, pontozási jegyzetek, kb. 90 yaku-bejegyzés, a 8 solitaire-elrendezés) le van fordítva fr, it, es, pt, de, hu nyelvre; a „szöveg angolul” megjegyzés már nem jelenik meg. Automatikus fordítások, anyanyelvi beszélők nem ellenőrizték.

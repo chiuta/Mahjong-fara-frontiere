@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.2.1 · **Ultima actualizare:** 2026-10-19
+**Versiune:** 1.2.2 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -106,6 +106,9 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Teste: `tests/fff-r8.test.mjs` (rețea blocată, două contexte conectate prin dialogul real, axe 0 violări la 1280 și 360 px).
 
 ## Istoric / Changelog
+
+### 1.2.2 — 2026-10-22
+- Glosar: termenii „Zid / Zid mort” și „Culoare lipsă” sunt traduși în toate limbile.
 
 ### 2026-10-19 (v1.2.1)
 - Toate textele lungi (atlasul celor 8 variante, glosarul, notele de scor, circa 90 de intrări yaku, cele 8 aranjamente de solitaire) sunt traduse în fr, it, es, pt, de, hu; nota „text în engleză” nu mai apare. Traduceri automate, neverificate de vorbitori nativi.

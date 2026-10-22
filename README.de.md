@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.2.1 · **Zuletzt aktualisiert:** 2026-10-19
+**Version:** 1.2.2 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -105,6 +105,9 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Tests: `tests/fff-r8.test.mjs` (Netzwerk gesperrt, zwei Kontexte über den echten Dialog verbunden, axe 0 Verstöße bei 1280 und 360 px).
 
 ## Verlauf / Changelog
+
+### 1.2.2 — 2026-10-22
+- Glossar: Die Begriffe „Mauer / Tote Mauer“ und „Fehlende Farbe“ sind in alle Sprachen übersetzt.
 
 ### 2026-10-19 (v1.2.1)
 - Alle langen Texte (Atlas der 8 Varianten, Glossar, Wertungshinweise, rund 90 Yaku-Einträge, die 8 Solitaire-Layouts) sind nach fr, it, es, pt, de, hu übersetzt; der Hinweis „Text auf Englisch“ erscheint nicht mehr. Automatische Übersetzungen, nicht von Muttersprachlern geprüft.

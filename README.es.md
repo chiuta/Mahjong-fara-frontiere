@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.2.1 · **Última actualización:** 2026-10-19
+**Versión:** 1.2.2 · **Última actualización:** 2026-10-22
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -106,6 +106,9 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Pruebas: `tests/fff-r8.test.mjs` (red bloqueada, dos contextos conectados mediante el diálogo real, axe 0 infracciones a 1280 y 360 px).
 
 ## Historial / Changelog
+
+### 1.2.2 — 2026-10-22
+- Glosario: los términos «Muro / Muro muerto» y «Palo faltante» están traducidos a todos los idiomas.
 
 ### 2026-10-19 (v1.2.1)
 - Todos los textos largos (atlas de las 8 variantes, glosario, notas de puntuación, unas 90 entradas de yaku, las 8 disposiciones del solitario) están traducidos a fr, it, es, pt, de, hu; la nota «texto en inglés» ya no aparece. Traducciones automáticas, no verificadas por hablantes nativos.

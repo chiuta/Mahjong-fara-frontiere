@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.2.1 · **Last updated:** 2026-10-19
+**Version:** 1.2.2 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -106,6 +106,9 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Tests: `tests/fff-r8.test.mjs` (network blocked, two contexts connected through the real dialog, axe 0 violations at 1280 and 360 px).
 
 ## History / Changelog
+
+### 1.2.2 — 2026-10-22
+- Glossary: the terms "Wall / Dead wall" and "Missing suit" are now translated into all languages.
 
 ### 2026-10-19 (v1.2.1)
 - All the long texts (atlas of 8 variants, glossary, scoring notes, about 90 yaku entries, the 8 solitaire layouts) are translated into fr, it, es, pt, de, hu; the "text in English" note no longer appears. Automatic translations, not verified by native speakers.
