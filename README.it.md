@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.2.7 · **Ultimo aggiornamento:** 2026-10-23
+**Versione:** 1.2.8 · **Ultimo aggiornamento:** 2026-10-23
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -105,6 +105,10 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Test: `tests/fff-r8.test.mjs` (rete bloccata, due contesti connessi tramite la finestra reale, axe 0 violazioni a 1280 e 360 px).
 
 ## Cronologia / Changelog
+
+### 1.2.8 — 2026-10-23
+
+- Correzione: la modalità Sichuan non era giocabile — la funzione di punteggio (`evalSichuan`) chiamava una funzione non definita (`LT`) e lanciava `ReferenceError` alla prima valutazione di una mano. Nuovo test di simulazione del motore (4 IA, 3 regole, punteggi conservati).
 
 ### 1.2.7 — 2026-10-23
 

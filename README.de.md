@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.2.7 · **Zuletzt aktualisiert:** 2026-10-23
+**Version:** 1.2.8 · **Zuletzt aktualisiert:** 2026-10-23
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -105,6 +105,10 @@ Alexio — Alexandru-Ionuț Chiuță · alexio@trom.tf
 - Tests: `tests/fff-r8.test.mjs` (Netzwerk gesperrt, zwei Kontexte über den echten Dialog verbunden, axe 0 Verstöße bei 1280 und 360 px).
 
 ## Verlauf / Changelog
+
+### 1.2.8 — 2026-10-23
+
+- Fix: Der Sichuan-Modus war nicht spielbar — die Wertungsfunktion (`evalSichuan`) rief eine undefinierte Funktion (`LT`) auf und warf `ReferenceError`, sobald eine Hand ausgewertet wurde. Neuer Engine-Simulationstest (4 KIs, 3 Regeln, Punkte erhalten).
 
 ### 1.2.7 — 2026-10-23
 
