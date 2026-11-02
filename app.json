@@ -14,8 +14,8 @@
   "storageKeys": [
     "mahjong."
   ],
-  "sizeBytes": 707683,
-  "sha256": "7f3224dbfac28efcec98d35eb9e2a59ae1c455d83fb00459efdee5c720572161",
+  "sizeBytes": 739004,
+  "sha256": "e80a2093d9018651989fbc039026347e7ec69a14b20ff5c15034e4d244c3a2f5",
   "csp": {
     "present": true,
     "directives": {
@@ -56,6 +56,8 @@
       "bundle",
       "qr",
       "p2p",
+      "sync",
+      "history",
       "tts"
     ]
   },
@@ -69,6 +71,8 @@
       "bundle",
       "qr",
       "p2p",
+      "sync",
+      "history",
       "tts"
     ]
   },
