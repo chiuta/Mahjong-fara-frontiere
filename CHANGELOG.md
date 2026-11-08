@@ -1,5 +1,9 @@
 # Jurnal de modificări
 
+## 2.1.4 — 2026-11-08
+
+- La începutul partidei, jurnalul arată regulile active (stil, durată, aka/kuitan, faan minim, plafon, flori, plata, „bătălia de sânge”), în 8 limbi; test `rezumat-reguli`.
+
 ## 2.1.1 — 2026-11-03
 
 Turneu și clasament Elo local (motor comun de jocuri), rezultate notate de mână
