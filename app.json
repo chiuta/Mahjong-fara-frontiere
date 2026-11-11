@@ -2,7 +2,7 @@
   "schema": 1,
   "slug": "mahjong",
   "name": "Mahjong fără frontiere",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "updated": "2026-11-11",
   "description": "Mahjong fără frontiere: atlas de variante, solitaire cu înțelegeri garantat rezolvabile și mahjong cu 4 jucători contra 3 AI (riichi, Hong Kong, Sichuan). Offline, fără cont, fără rețea.",
   "egress": [],
@@ -17,8 +17,8 @@
   "storageKeys": [
     "mahjong."
   ],
-  "sizeBytes": 899569,
-  "sha256": "ec5eda65ab34e77c03c1e3aaf8922bbc0192f55eb8c18776a45f8671822693e2",
+  "sizeBytes": 902452,
+  "sha256": "5e408ae5b4c4fb53411334e59bdaba4501a86a3649c2a4c1ea7b87715b19975f",
   "csp": {
     "present": true,
     "directives": {
