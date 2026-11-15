@@ -12,20 +12,21 @@
     "serviceWorker",
     "localStorage",
     "Web Crypto",
+    "WebGL",
     "BroadcastChannel"
   ],
   "storageKeys": [
     "mahjong."
   ],
-  "sizeBytes": 916029,
-  "sha256": "4db98eecbc8f97544d4bfc492cf15447b1a54c1b4fedea04c634b36c2584ae8c",
+  "sizeBytes": 968035,
+  "sha256": "4c868c775fd740252fc93768ef1c54b03914eb560e3d8ebbf797e75e07945554",
   "csp": {
     "present": true,
     "directives": {
       "default-src": "'none'",
       "img-src": "'self' data:",
       "style-src": "'unsafe-inline'",
-      "script-src": "sha256×6",
+      "script-src": "sha256×7",
       "base-uri": "'none'",
       "form-action": "'none'",
       "manifest-src": "'self'",
